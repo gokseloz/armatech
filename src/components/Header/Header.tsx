@@ -14,15 +14,43 @@ import Button from "@mui/material/Button";
 import Logo from "../../assets/images/armatech-logo.png";
 import theme from "../../theme";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Menu, MenuItem } from "@mui/material";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
 const navItems = ["Ana Sayfa", "Hakkımızda", "Ürünler", "İletişim"];
 
+const productMenu = [
+  { title: "TAKIM TUTUCULAR", link: "takim-tutucular" },
+  {
+    title: "VERO-S HIZLI PALET DEĞİŞTİRME SİSTEMİ",
+    link: "vero-s-hizli-palet-degistirme-sistemi",
+  },
+  { title: "TORNA AYNALARI", link: "torna-aynalari" },
+  { title: "KUVVET BLOKLARI", link: "kuvvet-bloklari" },
+  { title: "MENGENELER", link: "mengeneler" },
+  { title: "KULELER", link: "kuleler" },
+  { title: "MANYETİK TABLALAR", link: "manyetik-tablalar" },
+  { title: "VAKUM TABLA", link: "vakum-tabla" },
+  { title: "ÇAPAK ALMA", link: "capak-alma" },
+  { title: "OTOMATİK", link: "otomatik" },
+];
+
 export default function DrawerAppBar() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
+  };
+
+  const handleProductMenuClick = (
+    event: React.MouseEvent<HTMLButtonElement>
+  ) => {
+    setAnchorEl(event.currentTarget);
   };
 
   const drawer = (
@@ -43,18 +71,56 @@ export default function DrawerAppBar() {
     </Box>
   );
 
-  const handleClick = (section: string) => {
-    const targetSection = document.getElementById(section);
-    if (!targetSection) return;
+  const handleAnaSayfaClick = () => {
+    if (location.pathname === "/") {
+      const targetSection = document.getElementById("Ana Sayfa");
+      if (!targetSection) return;
+      const elementPosition =
+        targetSection.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 64;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    } else {
+      navigate("/");
+    }
+  };
 
-    const elementPosition =
-      targetSection.getBoundingClientRect().top + window.scrollY;
+  const handleHakkimizdaClick = () => {
+    if (location.pathname === "/") {
+      const targetSection = document.getElementById("Hakkımızda");
+      if (!targetSection) return;
+      const elementPosition =
+        targetSection.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 64;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    } else {
+      navigate("/");
+    }
+  };
 
-    const offsetPosition = elementPosition - 64;
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
+  const handleIletisimClick = () => {
+    if (location.pathname === "/") {
+      const targetSection = document.getElementById("İletişim");
+      if (!targetSection) return;
+      const elementPosition =
+        targetSection.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 64;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    } else {
+      navigate("/");
+    }
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
   };
 
   const handleLogoClick = () => {
@@ -62,6 +128,11 @@ export default function DrawerAppBar() {
       top: 0,
       behavior: "smooth",
     });
+  };
+
+  const handleProductClick = (link: string) => {
+    window.location.href = `/${link}`;
+    handleClose();
   };
 
   return (
@@ -91,16 +162,17 @@ export default function DrawerAppBar() {
             </Box>
 
             <Box>
-              {navItems.map((item) => (
-                <Button
-                  key={item}
-                  onClick={() => {
-                    handleClick(item);
-                  }}
-                >
-                  {item}
-                </Button>
-              ))}
+              <Button onClick={handleAnaSayfaClick}>Ana Sayfa</Button>
+              <Button onClick={handleHakkimizdaClick}>Hakkımızda</Button>
+              <Button
+                aria-controls={open ? "menu-list-grow" : undefined}
+                aria-haspopup="true"
+                onClick={handleProductMenuClick}
+                sx={{ color: "white" }}
+              >
+                Ürünler
+              </Button>
+              <Button onClick={handleIletisimClick}>İletişim</Button>
             </Box>
           </Box>
           <IconButton
@@ -116,6 +188,24 @@ export default function DrawerAppBar() {
           </IconButton>
         </Toolbar>
       </AppBar>
+      {/* Product Menu */}
+      <Menu
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        MenuListProps={{
+          "aria-labelledby": "basic-button",
+        }}
+      >
+        {productMenu.map((item) => (
+          <MenuItem
+            key={item.link}
+            onClick={() => handleProductClick(item.link)}
+          >
+            {item.title}
+          </MenuItem>
+        ))}
+      </Menu>
       <nav>
         <Drawer
           variant="temporary"
