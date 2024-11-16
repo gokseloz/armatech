@@ -1,5 +1,3 @@
-import React from "react";
-
 const TendoSlim4ax = () => {
   return <div>TendoSlim4ax</div>;
 };

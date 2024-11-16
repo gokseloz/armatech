@@ -1,5 +1,3 @@
-import React from "react";
-
 const VERO_S_Pimleri = () => {
   return <div>VERO_S_Pimleri</div>;
 };
