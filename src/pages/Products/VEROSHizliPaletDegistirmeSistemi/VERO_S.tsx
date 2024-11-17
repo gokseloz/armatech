@@ -1,5 +1,7 @@
+import Container from "../../../components/Container";
+
 const VERO_S = () => {
-  return <div>VERO_S</div>;
+  return <Container>VERO_S</Container>;
 };
 
 export default VERO_S;

@@ -24,7 +24,7 @@ const productMenu = [
   { title: "TAKIM TUTUCULAR", link: "takim-tutucular" },
   {
     title: "VERO-S HIZLI PALET DEĞİŞTİRME SİSTEMİ",
-    link: "vero-s-hizli-palet-degistirme-sistemi",
+    link: "vero-s-hizli-palet-degistirme-sistemleri",
   },
   { title: "TORNA AYNALARI", link: "torna-aynalari" },
   { title: "KUVVET BLOKLARI", link: "kuvvet-bloklari" },
