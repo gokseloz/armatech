@@ -138,11 +138,22 @@ export default function DrawerAppBar() {
   return (
     <>
       <AppBar
+        id="haha"
         component="nav"
         sx={{
           padding: theme.spacing(1),
+          backgroundColor: "transparent",
           background:
-            "linear-gradient(135deg, rgb(0, 2, 8) 0%, rgb(0, 1, 10) 30%, rgb(6, 11, 21) 55%, rgb(0, 23, 30) 70%, rgb(0, 17, 22) 100%)",
+            "linear-gradient(90deg, rgb(45,56,138), rgb(0,174,239),rgb(45,56,138))",
+          "&::before": {
+            content: '""',
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.2)", // Dark overlay
+          },
         }}
       >
         <Toolbar>

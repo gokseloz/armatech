@@ -86,11 +86,14 @@ import Otomatik from "./pages/Products/Otomatik/Otomatik";
 import TendoHidrolikTakimTutucular from "./pages/Products/TakimTutucular/TendoHidrolikTakimTutucular/TendoHidrolikTakimTutucular";
 import MekanikTakimTutucular from "./pages/Products/TakimTutucular/MekanikTakimTutucular/MekanikTakimTutucular";
 import Footer from "./components/Footer/Footer";
+import Itendo2 from "./pages/Products/TakimTutucular/TendoHidrolikTakimTutucular/Itendo2";
+import UseScrollToTop from "./hooks/UseScrollToTop";
 
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <Router>
+        <UseScrollToTop />
         <Box id="Ana Sayfa">
           <Header />
           <Stack
@@ -105,10 +108,6 @@ const App: React.FC = () => {
               <Route
                 path="/takim-tutucular/tendo-hidrolik-takim-tutucular"
                 element={<TendoHidrolikTakimTutucular />}
-              />
-              <Route
-                path="/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-e-compact"
-                element={<TendoECompact />}
               />
               <Route
                 path="/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-e-compact"
@@ -145,6 +144,14 @@ const App: React.FC = () => {
               <Route
                 path="/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-wzs"
                 element={<TendoWZS />}
+              />
+              <Route
+                path="/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-wzs"
+                element={<TendoWZS />}
+              />
+              <Route
+                path="/takim-tutucular/tendo-hidrolik-takim-tutucular/itendo2"
+                element={<Itendo2 />}
               />
               {/* Tribos Takım Tutucular */}
               <Route path="/takim-tutucular/tribos" element={<Tribos />} />

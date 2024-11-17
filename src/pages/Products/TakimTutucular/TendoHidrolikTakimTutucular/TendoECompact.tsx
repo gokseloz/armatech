@@ -3,6 +3,7 @@ import styled from "@mui/system/styled";
 import tendoECompact from "../../../../assets/images/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-e-compact.webp";
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
+import { Helmet } from "react-helmet";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -14,14 +15,11 @@ const ProductImage = styled("img")({
   maxWidth: "100%",
   height: "auto",
   maxHeight: "400px",
-  borderRadius: "8px",
-  boxShadow: theme.shadows[5],
 });
 
 const VideoContainer = styled(Box)({
   position: "relative",
-  paddingTop: "56.25%", // Aspect ratio 16:9
-  height: 0,
+  height: "600px",
   margin: "40px auto",
   width: "80%",
   maxWidth: "800px",
@@ -39,7 +37,17 @@ const YouTubeIframe = styled("iframe")({
 const TendoECompactDetailPage = () => {
   return (
     <Container>
-      {/* Header Section */}
+      <Helmet>
+        <title>TENDO E Compact - Ürün Detayları</title>
+        <meta
+          name="description"
+          content="TENDO E Compact, frezeleme, delme, raybalama ve diş açma gibi uygulamalarda üstün performans sunar. Kesici takım ömrünü %300'e kadar uzatır."
+        />
+        <meta
+          name="keywords"
+          content="TENDO E Compact, SCHUNK, hidrolik takım tutucu, frezeleme, raybalama, diş açma, yüksek performans"
+        />
+      </Helmet>
       <HeroSection>
         <Typography variant="h3" gutterBottom textAlign="center">
           TENDO E Compact
@@ -49,15 +57,22 @@ const TendoECompactDetailPage = () => {
           diş açma gibi uygulamalarda üstün performans sunar. Kesici takım
           ömrünü %300'e kadar uzatır.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4}>
+        <Box display="flex" justifyContent="center" gap={4} px={8}>
           <Box
             sx={{
+              flex: 1,
+              width: 250,
+              minWidth: 250,
+              height: 400,
               display: "flex",
+              justifyContent: "center",
+              padding: 2,
+              boxShadow: theme.shadows[5],
             }}
           >
             <ProductImage src={tendoECompact} alt="TENDO E Compact" />
           </Box>
-          <Box id="tata">
+          <Box flex={4}>
             <Typography variant="h4" gutterBottom>
               Ürün Özellikleri
             </Typography>
@@ -94,7 +109,6 @@ const TendoECompactDetailPage = () => {
         </Box>
       </HeroSection>
 
-      {/* Video Section */}
       <Box sx={{ textAlign: "center", padding: 4 }}>
         <Typography variant="h4" gutterBottom>
           TENDO E Compact'ın Performansını Keşfedin

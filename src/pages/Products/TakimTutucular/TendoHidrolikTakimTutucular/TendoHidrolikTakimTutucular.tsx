@@ -23,6 +23,7 @@ import tendoWZS from "../../../../assets/images/takim-tutucular/tendo-hidrolik-t
 import iTendo2 from "../../../../assets/images/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-itendo2.webp";
 import theme from "../../../../theme";
 import { useNavigate } from "react-router-dom";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const productData = [
   {
@@ -34,47 +35,76 @@ const productData = [
   {
     title: "TENDO Silver",
     image: tendoSilver,
+    productDetailLink: "/tendo-silver",
     youtubeLink: "https://www.youtube.com/embed/xqnnVoHNDv0",
   },
   {
     title: "Tendo Slim 4ax",
     image: tendoSlim4ax,
+    productDetailLink: "/tendo-slim-4ax",
     youtubeLink: "https://www.youtube.com/embed/4u77y69uB8k",
   },
   {
     title: "Tendo Platinum",
     image: tendoPlatinum,
+    productDetailLink: "/tendo-platinum",
     youtubeLink: "https://www.youtube.com/embed/xqnnVoHNDv0",
   },
   {
     title: "Tendo Zero",
     image: tendoZero,
+    productDetailLink: "/tendo-zero",
     youtubeLink: "https://www.youtube.com/embed/3tdD9wSwYk0",
   },
   {
     title: "Tendo LSS",
     image: tendoLSS,
-    youtubeLink: "https://www.youtube.com/embed/example6",
+    productDetailLink: "/tendo-lss",
+    youtubeLink: undefined,
+    keyFeatures: [
+      "Dar alanlara kolay erişim",
+      "Titreşim azaltma",
+      "Enerji verimli performans",
+    ],
   },
   {
     title: "Tendo RLA",
     image: tendoRLA,
-    youtubeLink: "https://www.youtube.com/embed/example7",
+    productDetailLink: "/tendo-rla",
+    youtubeLink: undefined,
+    keyFeatures: [
+      "Mikron-Hassas Uzunluk Ayarı",
+      "Hızlı ve Enerji Verimli Takım Değişimi",
+      "Yüksek Hız ve Çok Yönlülük",
+    ],
   },
   {
     title: "TENDO Turn",
     image: tendoTurn,
-    youtubeLink: "https://www.youtube.com/embed/example8",
+    productDetailLink: "/tendo-turn",
+    youtubeLink: undefined,
+    keyFeatures: [
+      "Titreşim Sönümleme ile Uzun Ömür",
+      "Hızlı ve Dayanıklı Tasarım",
+      "Yüksek Hız ve Hassasiyet",
+    ],
   },
   {
     title: "TENDO WZS",
     image: tendoWZS,
-    youtubeLink: "https://www.youtube.com/embed/example9",
+    productDetailLink: "/tendo-wzs",
+    youtubeLink: undefined,
+    keyFeatures: [
+      "Geliştirilmiş Erişim ve Hassasiyet",
+      "Uzun Ömür ve Titreşim Sönümleme",
+      "Yüksek Performans ve Esneklik",
+    ],
   },
   {
     title: "iTendo²",
     image: iTendo2,
-    youtubeLink: "https://www.youtube.com/embed/example10",
+    productDetailLink: "/itendo2",
+    youtubeLink: "https://www.youtube.com/embed/wM7Y3jO7b7o",
   },
 ];
 
@@ -104,7 +134,9 @@ const TendoHidrolikTakimTutucular = () => {
             key={product.title}
             title={product.title}
             image={product.image}
+            productDetailLink={product.productDetailLink}
             youtubeLink={product.youtubeLink}
+            keyFeatures={product.keyFeatures}
           />
         ))}
       </Box>
@@ -160,11 +192,15 @@ const ModalContent = styled(Box)({
 const ProductCard = ({
   title,
   image,
+  productDetailLink,
   youtubeLink,
+  keyFeatures,
 }: {
   title: string;
   image: string;
-  youtubeLink: string;
+  productDetailLink: string;
+  youtubeLink?: string;
+  keyFeatures?: string[];
 }) => {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
@@ -174,8 +210,10 @@ const ProductCard = ({
   };
   const handleClose = () => setOpen(false);
 
-  const openProductDetail = () => {
-    navigate("/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-e-compact");
+  const openProductDetail = (productDetailLink: string) => {
+    navigate(
+      `/takim-tutucular/tendo-hidrolik-takim-tutucular${productDetailLink}`
+    );
   };
 
   return (
@@ -186,7 +224,7 @@ const ProductCard = ({
           sx={{
             cursor: "pointer",
           }}
-          onClick={openProductDetail}
+          onClick={() => openProductDetail(productDetailLink)}
         >
           <CardMedia
             component="img"
@@ -202,14 +240,43 @@ const ProductCard = ({
             <Typography variant="h6">{title}</Typography>
           </CardContent>
         </Stack>
-        <VideoContainer id="haha" onClick={handleOpen}>
-          <YouTubeIframe
-            src={youtubeLink}
-            title={title}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </VideoContainer>
+        {youtubeLink && (
+          <VideoContainer id="haha" onClick={handleOpen}>
+            <YouTubeIframe
+              src={youtubeLink}
+              title={title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </VideoContainer>
+        )}
+        {!youtubeLink && (
+          <Stack
+            sx={{
+              display: "flex",
+              height: 150,
+              paddingLeft: 2,
+              // alignItems: "center",
+              justifyContent: "center",
+              backgroundColor: "#f9f9f9",
+              border: "1px solid #e0e0e0",
+            }}
+          >
+            <Typography textAlign="center" variant="subtitle1" gutterBottom>
+              Öne Çıkan Özellikler
+            </Typography>
+            {keyFeatures?.map((feature) => (
+              <KeyFeature
+                icon={
+                  <CheckCircleIcon
+                    sx={{ color: "primary.main", fontSize: 16 }}
+                  />
+                }
+                title={feature}
+              />
+            ))}
+          </Stack>
+        )}
       </ProductCardContainer>
 
       {/* Video Modal */}
@@ -236,3 +303,18 @@ const ProductCard = ({
     </>
   );
 };
+
+const KeyFeature = ({
+  icon,
+  title,
+}: {
+  icon: React.ReactNode;
+  title: string;
+}) => (
+  <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+    {icon}
+    <Typography variant="body2" sx={{ fontWeight: "bold" }}>
+      {title}
+    </Typography>
+  </Box>
+);

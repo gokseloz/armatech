@@ -1,6 +1,7 @@
+/* eslint-disable react-refresh/only-export-components */
 import { Box, Stack, Typography } from "@mui/material";
 import styled from "@mui/system/styled";
-import tendoZero from "../../../../assets/images/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-zero.webp";
+import itendo2 from "../../../../assets/images/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-itendo2.webp";
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
@@ -34,30 +35,30 @@ const YouTubeIframe = styled("iframe")({
   border: "none",
 });
 
-const TendoZeroDetailPage = () => {
+const iTendo2 = () => {
   return (
     <Container>
       <Helmet>
-        <title>TENDO Zero - Ürün Detayları</title>
+        <title>iTENDO² - Ürün Detayları</title>
         <meta
           name="description"
-          content="TENDO Zero, mükemmel çalışma hassasiyeti ve sıkı toleranslar gerektiren prosesler için uyumlu bir hidrolik takım tutucusudur. Telafi edilebilir çalışma hatası sağlar."
+          content="iTENDO², akıllı hidrolik takım tutucular için devrim niteliğinde bir sistemdir. Gerçek zamanlı işlem izleme ve optimizasyonu sağlar."
         />
         <meta
           name="keywords"
-          content="TENDO Zero, hidrolik takım tutucu, sıkı tolerans, yüksek hız, HSC işleme, hassas işleme"
+          content="iTENDO², akıllı hidrolik takım tutucu, işlem izleme, işlem optimizasyonu, SCHUNK"
         />
       </Helmet>
 
       {/* Header Section */}
       <HeroSection>
         <Typography variant="h3" gutterBottom textAlign="center">
-          TENDO Zero
+          iTENDO²
         </Typography>
         <Typography variant="subtitle1" textAlign="center" mb={4}>
-          TENDO Zero, delme, ince delme ve son işlemde sıkı toleranslar
-          gerektiğinde veya mükemmel çalışma hassasiyeti şartı istenilen
-          prosesler için uyumludur.
+          iTENDO², iş parçasına yakın bir ivme sensörü kullanarak işlem
+          optimizasyonu için hassas stabilite değerleri sağlar. Üç farklı
+          varyant ile sunulur: Pad, Easy Connect ve Easy Monitor.
         </Typography>
         <Box
           display="flex"
@@ -82,7 +83,7 @@ const TendoZeroDetailPage = () => {
               backgroundColor: "#fff",
             }}
           >
-            <ProductImage src={tendoZero} alt="TENDO Zero" />
+            <ProductImage src={itendo2} alt="iTENDO²" />
           </Box>
           <Box flex={4}>
             <Typography variant="h4" gutterBottom>
@@ -94,30 +95,25 @@ const TendoZeroDetailPage = () => {
               sx={{ paddingLeft: 2, listStyle: "disc" }}
             >
               <Typography component="li">
-                0 μm'ye kadar ayarlanabilir çalışma hatası hassasiyeti sağlar.
+                Akıllı gerçek zamanlı sensör sistemi ile işlem optimizasyonu
+                sağlar.
               </Typography>
               <Typography component="li">
-                Büyük sıkma basıncı, yağ, gres veya yağlayıcı kalıntılarının
-                oluk içine itilmesini sağlar.
+                Kolay işlem izleme ve maksimize edilmiş araç servis ömrü sunar.
               </Typography>
               <Typography component="li">
-                25.000 RPM'de G2.5 denge derecesi ile yüksek hızlar ve HSC
-                işleme için uygundur.
+                30.000 RPM'ye kadar dönme hızlarında kullanabilirsiniz.
               </Typography>
               <Typography component="li">
-                Makine milini koruma, iş parçası yüzeylerinin iyileştirilmesi ve
-                takım ömrünün uzatılmasıyla maliyetleri azaltır.
+                %100 uyumluluk ve kolay entegrasyon sağlar.
               </Typography>
               <Typography component="li">
-                TENDO SVL ve TRIBOS SVL uzantılarıyla uyumlu şekilde mükemmel
-                kombinlenebilir.
+                SCHUNK standart takım tutucularıyla zaman alıcı yeniden
+                programlama olmadan 1:1 değişim sağlar.
               </Typography>
               <Typography component="li">
-                Ek sıkma cihazlarına yatırım yapma ve enerji maliyetleri olmadan
-                zaman ve maliyet tasarrufu sağlar.
-              </Typography>
-              <Typography component="li">
-                Tamamen kapalı sistem uzun bir servis ömrü sağlar.
+                Herhangi bir gereksinim ve karmaşıklık seviyesi için uygun
+                çözümler sunar.
               </Typography>
             </Stack>
           </Box>
@@ -127,12 +123,12 @@ const TendoZeroDetailPage = () => {
       {/* Video Section */}
       <Box sx={{ textAlign: "center", padding: 4 }}>
         <Typography variant="h4" gutterBottom>
-          TENDO Zero'ın Performansını Keşfedin
+          iTENDO²'nin Performansını Keşfedin
         </Typography>
         <VideoContainer>
           <YouTubeIframe
-            src="https://www.youtube.com/embed/3tdD9wSwYk0"
-            title="TENDO Zero Video"
+            src="https://www.youtube.com/embed/wM7Y3jO7b7o"
+            title="iTENDO² Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           />
@@ -142,4 +138,4 @@ const TendoZeroDetailPage = () => {
   );
 };
 
-export default TendoZeroDetailPage;
+export default iTendo2;
