@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import styled from "@mui/system/styled";
 import tendoECompact from "../../../../assets/images/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-e-compact.webp";
