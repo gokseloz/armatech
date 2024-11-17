@@ -7,6 +7,7 @@ import {
   CardContent,
   Modal,
   Backdrop,
+  Stack,
 } from "@mui/material";
 import { useState } from "react";
 import Container from "../../../../components/Container";
@@ -21,32 +22,34 @@ import tendoTurn from "../../../../assets/images/takim-tutucular/tendo-hidrolik-
 import tendoWZS from "../../../../assets/images/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-wzs.webp";
 import iTendo2 from "../../../../assets/images/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-itendo2.webp";
 import theme from "../../../../theme";
+import { useNavigate } from "react-router-dom";
 
 const productData = [
   {
     title: "TENDO E Compact",
     image: tendoECompact,
+    productDetailLink: "/tendo-e-compact",
     youtubeLink: "https://www.youtube.com/embed/k1q1_cbXc1s",
   },
   {
     title: "TENDO Silver",
     image: tendoSilver,
-    youtubeLink: "https://www.youtube.com/embed/example2",
+    youtubeLink: "https://www.youtube.com/embed/xqnnVoHNDv0",
   },
   {
     title: "Tendo Slim 4ax",
     image: tendoSlim4ax,
-    youtubeLink: "https://www.youtube.com/embed/example3",
+    youtubeLink: "https://www.youtube.com/embed/4u77y69uB8k",
   },
   {
     title: "Tendo Platinum",
     image: tendoPlatinum,
-    youtubeLink: "https://www.youtube.com/embed/example4",
+    youtubeLink: "https://www.youtube.com/embed/xqnnVoHNDv0",
   },
   {
     title: "Tendo Zero",
     image: tendoZero,
-    youtubeLink: "https://www.youtube.com/embed/example5",
+    youtubeLink: "https://www.youtube.com/embed/3tdD9wSwYk0",
   },
   {
     title: "Tendo LSS",
@@ -93,6 +96,7 @@ const TendoHidrolikTakimTutucular = () => {
           flexWrap: "wrap",
           justifyContent: "center",
           gap: 4,
+          paddingBottom: 2,
         }}
       >
         {productData.map((product) => (
@@ -162,31 +166,42 @@ const ProductCard = ({
   image: string;
   youtubeLink: string;
 }) => {
+  const navigate = useNavigate();
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
     setOpen(true);
-    console.log("hahah");
   };
   const handleClose = () => setOpen(false);
+
+  const openProductDetail = () => {
+    navigate("/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-e-compact");
+  };
 
   return (
     <>
       {/* Product Card */}
       <ProductCardContainer>
-        <CardMedia
-          component="img"
-          image={image}
-          alt={title}
+        <Stack
           sx={{
-            padding: 1,
-            height: 150,
-            objectFit: "contain",
+            cursor: "pointer",
           }}
-        />
-        <CardContent sx={{ textAlign: "center" }}>
-          <Typography variant="h6">{title}</Typography>
-        </CardContent>
+          onClick={openProductDetail}
+        >
+          <CardMedia
+            component="img"
+            image={image}
+            alt={title}
+            sx={{
+              padding: 1,
+              height: 150,
+              objectFit: "contain",
+            }}
+          />
+          <CardContent sx={{ textAlign: "center" }}>
+            <Typography variant="h6">{title}</Typography>
+          </CardContent>
+        </Stack>
         <VideoContainer id="haha" onClick={handleOpen}>
           <YouTubeIframe
             src={youtubeLink}
