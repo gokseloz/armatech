@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import theme from "./theme";
-import { Box, ThemeProvider } from "@mui/material";
+import { Box, Stack, ThemeProvider } from "@mui/material";
 import TakimTutucular from "./pages/Products/TakimTutucular/TakimTutucular";
 import {
   TendoECompact,
@@ -83,6 +83,9 @@ import TelErezyonManyetigi from "./pages/Products/ManyetikTablalar/TelErezyonMan
 import VakumTabla from "./pages/Products/VakumTabla/VakumTabla";
 import CapakAlma from "./pages/Products/CapakAlma/CapakAlma";
 import Otomatik from "./pages/Products/Otomatik/Otomatik";
+import TendoHidrolikTakimTutucular from "./pages/Products/TakimTutucular/TendoHidrolikTakimTutucular/TendoHidrolikTakimTutucular";
+import MekanikTakimTutucular from "./pages/Products/TakimTutucular/MekanikTakimTutucular/MekanikTakimTutucular";
+import Footer from "./components/Footer/Footer";
 
 const App: React.FC = () => {
   return (
@@ -90,16 +93,19 @@ const App: React.FC = () => {
       <Router>
         <Box id="Ana Sayfa">
           <Header />
-          <Box
+          <Stack
             component="main"
-            sx={{
-              marginTop: "80px",
-            }}
+            justifyContent="space-between"
+            minHeight="100vh"
           >
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/takim-tutucular" element={<TakimTutucular />} />
               {/* Tendo Hidrolik Takım Tutucular */}
+              <Route
+                path="/takim-tutucular/tendo-hidrolik-takim-tutucular"
+                element={<TendoHidrolikTakimTutucular />}
+              />
               <Route
                 path="/takim-tutucular/tendo-hidrolik-takim-tutucular/tendo-e-compact"
                 element={<TendoECompact />}
@@ -161,6 +167,10 @@ const App: React.FC = () => {
               {/* SINO-R */}
               <Route path="/takim-tutucular/SINO-R" element={<SINOR />} />
               {/* Mekanik Takım Tutucular */}
+              <Route
+                path="/takim-tutucular/mekanik-takim-tutucular"
+                element={<MekanikTakimTutucular />}
+              />
               <Route
                 path="/takim-tutucular/mekanik-takim-tutucular/celsio-shrink-takim-tutucular"
                 element={<CelsioShrinkTakimTutucular />}
@@ -347,7 +357,8 @@ const App: React.FC = () => {
               {/* Otomatik */}
               <Route path="/otomatik" element={<Otomatik />} />
             </Routes>
-          </Box>
+            <Footer />
+          </Stack>
         </Box>
       </Router>
     </ThemeProvider>

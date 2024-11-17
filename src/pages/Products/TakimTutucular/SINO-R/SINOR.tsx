@@ -1,5 +1,7 @@
+import Container from "../../../../components/Container";
+
 const SINOR = () => {
-  return <div>SINOR</div>;
+  return <Container>SINOR</Container>;
 };
 
 export default SINOR;

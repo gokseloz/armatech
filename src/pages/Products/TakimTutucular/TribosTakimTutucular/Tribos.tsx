@@ -1,5 +1,7 @@
+import Container from "../../../../components/Container";
+
 const Tribos = () => {
-  return <div>Tribos</div>;
+  return <Container>Tribos</Container>;
 };
 
 export default Tribos;

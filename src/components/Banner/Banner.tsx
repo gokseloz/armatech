@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import BannerImage from "../../assets/images/banner.jpg";
+import BannerImage from "../../assets/images/banner2.webp";
 
 const Banner = () => {
   return (
