@@ -30,7 +30,7 @@ import {
   TaramaMalafaTutucular,
 } from "./pages/Products/TakimTutucular/MekanikTakimTutucular";
 import VERO_S_NSE3_ve_NSEPlus from "./pages/Products/VEROSHizliPaletDegistirmeSistemi/GenelFreezelemeUygulamalariVeAgirKesme/VERO_S_NSE3_ve_NSEPlus";
-import VERO_S from "./pages/Products/VEROSHizliPaletDegistirmeSistemi/VERO_S";
+import VeroSHizliPaletDegistirmeSistemi from "./pages/Products/VEROSHizliPaletDegistirmeSistemi/VERO_S";
 import {
   VERO_S_OtomatikYuklemeBosaltma,
   VERO_S_NSL3_150_200_400,
@@ -197,7 +197,7 @@ const App: React.FC = () => {
               {/* VERO-S HIZLI PALET DEĞİŞTİRME SİSTEMİ */}
               <Route
                 path="/vero-s-hizli-palet-degistirme-sistemleri/"
-                element={<VERO_S />}
+                element={<VeroSHizliPaletDegistirmeSistemi />}
               />
               <Route
                 path="/vero-s-hizli-palet-degistirme-sistemleri/nse3-nseplus/"

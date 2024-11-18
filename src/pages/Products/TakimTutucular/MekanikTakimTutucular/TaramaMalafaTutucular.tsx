@@ -17,14 +17,6 @@ const ProductImage = styled("img")({
   maxHeight: "400px",
 });
 
-const VideoContainer = styled(Box)({
-  position: "relative",
-  height: "600px",
-  margin: "40px auto",
-  width: "80%",
-  maxWidth: "800px",
-});
-
 const TaramaMalafaTutucular = () => {
   return (
     <Container>
@@ -119,29 +111,6 @@ const TaramaMalafaTutucular = () => {
           </Box>
         </Box>
       </HeroSection>
-
-      {/* Video Section */}
-      <Box sx={{ textAlign: "center", padding: 4 }}>
-        <Typography variant="h4" gutterBottom>
-          Tarama Malafa Tutucular'ın Performansını Keşfedin
-        </Typography>
-        <VideoContainer>
-          <Box
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-              backgroundColor: "#f0f0f0",
-              borderRadius: "8px",
-            }}
-          >
-            <Typography variant="body1">
-              Bu ürün için video mevcut değil.
-            </Typography>
-          </Box>
-        </VideoContainer>
-      </Box>
     </Container>
   );
 };
