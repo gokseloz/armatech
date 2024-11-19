@@ -144,7 +144,7 @@ const KSX_C2_Mengene = () => {
         </Typography>
         <VideoContainer>
           <YouTubeIframe
-            src="https://www.youtube.com/embed/zdbYdEh2YFc&t=174s"
+            src="https://www.youtube.com/embed/zdbYdEh2YFc"
             title="KSX-C2 Mengene Video"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

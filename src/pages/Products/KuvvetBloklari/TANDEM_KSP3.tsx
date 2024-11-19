@@ -1,7 +1,9 @@
 /* eslint-disable react-refresh/only-export-components */
-import { Typography, Box, Stack, Container } from "@mui/material";
+import { Typography, Box, Stack } from "@mui/material";
 import styled from "@mui/system/styled";
 import tandemKSP3Image from "../../../assets/images/kuvvet-bloklari/tandem-ksp3.webp";
+import { Helmet } from "react-helmet";
+import Container from "../../../components/Container";
 import theme from "../../../theme";
 
 const HeroSection = styled(Box)({
@@ -35,6 +37,18 @@ const YouTubeIframe = styled("iframe")({
 const TANDEM_KSP3 = () => {
   return (
     <Container>
+      <Helmet>
+        <title>TANDEM KSP3 - Ürün Detayları</title>
+        <meta
+          name="description"
+          content="SCHUNK TANDEM KSP3, yüksek sıkma kuvvetleri ve yeni teknik özellikler sunan, kompakt tasarıma sahip pnömatik 2-çeneli sıkma kuvveti bloklarıdır."
+        />
+        <meta
+          name="keywords"
+          content="TANDEM KSP3, SCHUNK, kuvvet blokları, pnömatik sıkma, sıkma kuvveti"
+        />
+      </Helmet>
+
       <HeroSection>
         <Typography variant="h3" gutterBottom textAlign="center">
           TANDEM KSP3

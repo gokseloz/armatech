@@ -1,7 +1,9 @@
 /* eslint-disable react-refresh/only-export-components */
-import { Typography, Box, Stack, Container } from "@mui/material";
+import { Typography, Box, Stack } from "@mui/material";
 import styled from "@mui/system/styled";
 import tandemKRPImage from "../../../assets/images/kuvvet-bloklari/tandem-krp.webp";
+import { Helmet } from "react-helmet";
+import Container from "../../../components/Container";
 import theme from "../../../theme";
 
 const HeroSection = styled(Box)({
@@ -18,6 +20,18 @@ const ProductImage = styled("img")({
 const TANDEM_KRP = () => {
   return (
     <Container>
+      <Helmet>
+        <title>TANDEM KRP - Ürün Detayları</title>
+        <meta
+          name="description"
+          content="SCHUNK TANDEM KRP, palet otomasyonu ile esnek, hassas ve gelişmiş sıkma yöntemleri sunar. Ağır ve karmaşık iş parçaları için idealdir."
+        />
+        <meta
+          name="keywords"
+          content="TANDEM KRP, SCHUNK, kuvvet blokları, palet otomasyonu, sıkma yöntemleri"
+        />
+      </Helmet>
+
       <HeroSection>
         <Typography variant="h3" gutterBottom textAlign="center">
           TANDEM KRP

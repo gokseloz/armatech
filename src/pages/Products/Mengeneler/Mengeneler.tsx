@@ -54,7 +54,7 @@ const products = [
     title: "KSX-C2 Mengene",
     image: ksxC2Image,
     productDetailLink: "/ksx-c2",
-    youtubeLink: "https://www.youtube.com/embed/zdbYdEh2YFc&t=174s",
+    youtubeLink: "https://www.youtube.com/embed/zdbYdEh2YFc",
   },
   {
     title: "KSC-D Mengene",
