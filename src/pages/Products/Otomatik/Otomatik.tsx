@@ -84,6 +84,44 @@ const Otomatik = () => {
           </Box>
         </ImageAndFeaturesContainer>
       </HeroSection>
+      <Stack sx={{ textAlign: "center", padding: 4, gap: 4 }}>
+        <Box>
+          <Typography variant="h4" gutterBottom>
+            Otomatik Performansını Keşfedin
+          </Typography>
+          <iframe
+            width="80%"
+            height="500"
+            src="https://www.youtube.com/embed/KaIR-PN8-Io"
+            title="Çapak Alma Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Box>
+        <Box>
+          <iframe
+            width="80%"
+            height="500"
+            src="https://www.youtube.com/embed/B81N8vLzRYs"
+            title="Çapak Alma Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Box>
+        <Box>
+          <iframe
+            width="80%"
+            height="500"
+            src="https://www.youtube.com/embed/9QkkKLlVE_8"
+            title="Çapak Alma Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Box>
+      </Stack>
     </Container>
   );
 };

@@ -2,7 +2,7 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import theme from "../../../theme";
-import hidrolikTornaImage from "../../../assets/images/torna-aynalari/hidrolik-torna-aynalari/rota-2b.webp";
+import hidrolikTornaImage from "../../../assets/images/torna-aynalari/hidrolik-torna-aynalari/rota-thw3.webp";
 import mekanikTornaImage from "../../../assets/images/torna-aynalari/mekanik-torna-aynalari/rota-ml-flex-2-2.webp";
 import pnomatikTornaImage from "../../../assets/images/torna-aynalari/pnomatik-torna-aynalari/rota-tp.webp";
 import thlPlusImage from "../../../assets/images/torna-aynalari/thl-plus-ara-yatak-lunetler/thl-plus.webp";

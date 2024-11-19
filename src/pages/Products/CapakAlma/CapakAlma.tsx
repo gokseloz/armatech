@@ -83,20 +83,55 @@ const CapakAlma = () => {
         </ImageAndFeaturesContainer>
       </HeroSection>
 
-      <Box sx={{ textAlign: "center", padding: 4 }}>
-        <Typography variant="h4" gutterBottom>
-          Çapak Alma Performansını Keşfedin
-        </Typography>
-        <iframe
-          width="80%"
-          height="500"
-          src="https://www.youtube.com/embed/1RZYvnKAlB4"
-          title="Çapak Alma Video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        />
-      </Box>
+      <Stack sx={{ textAlign: "center", padding: 4, gap: 4 }}>
+        <Box>
+          <Typography variant="h4" gutterBottom>
+            Çapak Alma Performansını Keşfedin
+          </Typography>
+          <iframe
+            width="80%"
+            height="500"
+            src="https://www.youtube.com/embed/D4EiYykqEQ"
+            title="Çapak Alma Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Box>
+        <Box>
+          <iframe
+            width="80%"
+            height="500"
+            src="https://www.youtube.com/embed/H39tO5rLSXY"
+            title="Çapak Alma Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Box>
+        <Box>
+          <iframe
+            width="80%"
+            height="500"
+            src="https://www.youtube.com/embed/XalzvNYFeww"
+            title="Çapak Alma Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Box>
+        <Box>
+          <iframe
+            width="80%"
+            height="500"
+            src="https://www.youtube.com/embed/aS-TfbxGfS0"
+            title="Çapak Alma Video"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          />
+        </Box>
+      </Stack>
     </Container>
   );
 };

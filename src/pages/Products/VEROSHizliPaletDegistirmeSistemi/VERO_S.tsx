@@ -3,7 +3,7 @@ import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import theme from "../../../theme";
 import veroSNse3Image from "../../../assets/images/vero-s-hizli-palet-degistirme-sistemi/genel-frezeleme/vero-s-nse3-nse-plus.png";
-import veroSNseA3 from "../../../assets/images/vero-s-hizli-palet-degistirme-sistemi/otomatik-yukleme-bosaltma/nse-a3.png";
+import nsl3150200400 from "../../../assets/images/vero-s-hizli-palet-degistirme-sistemi/otomatik-yukleme-bosaltma/vero-s-nsl3-150-200-400/nsl3150200400.webp";
 import wdm5xImage from "../../../assets/images/vero-s-hizli-palet-degistirme-sistemi/wdm5x/wdm5x_1.jpg";
 import Container from "../../../components/Container";
 import { useNavigate } from "react-router-dom";
@@ -100,7 +100,7 @@ const VeroSHizliPaletDegistirmeSistemi = () => {
             <StyledCardMediaWrapper>
               <CardMedia
                 component="img"
-                image={veroSNseA3}
+                image={nsl3150200400}
                 alt="Otomatik Yükleme ve Boşaltma"
                 sx={{ height: 150, width: "auto" }}
               />

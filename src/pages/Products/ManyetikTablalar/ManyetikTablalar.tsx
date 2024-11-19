@@ -25,12 +25,6 @@ import telErozyonImage from "../../../assets/images/manyetik-tablalar/tel-erozyo
 // Product data
 const products = [
   {
-    title: "Kaldıraç",
-    image: kaldiracImage,
-    productDetailLink: "/kaldirac",
-    youtubeLink: "https://www.youtube.com/embed/Mq-JcvdF-1U",
-  },
-  {
     title: "Kare Kutuplu Manyetik Tabla",
     image: kareKutupluImage,
     productDetailLink: "/kare-kutuplu-manyetik-tabla",
@@ -41,12 +35,6 @@ const products = [
     image: kontrolUnitesiImage,
     productDetailLink: "/kontrol-unitesi",
     youtubeLink: "https://www.youtube.com/embed/jjhxZNalLQw&t=18s",
-  },
-  {
-    title: "Speedy Bat",
-    image: speedyBatImage,
-    productDetailLink: "/speedy-bat",
-    youtubeLink: "https://www.youtube.com/embed/76d65WAP7oU",
   },
   {
     title: "Taşlama Manyetiği",
@@ -64,6 +52,18 @@ const products = [
       "Yüksek tutma gücü ve deformasyonsuz sıkıştırma",
       "Paslanmaz çelik çerçeve ile uzun ömür",
     ],
+  },
+  {
+    title: "Kaldıraç",
+    image: kaldiracImage,
+    productDetailLink: "/kaldirac",
+    youtubeLink: "https://www.youtube.com/embed/Mq-JcvdF-1U",
+  },
+  {
+    title: "Speedy Bat",
+    image: speedyBatImage,
+    productDetailLink: "/speedy-bat",
+    youtubeLink: "https://www.youtube.com/embed/76d65WAP7oU",
   },
 ];
 

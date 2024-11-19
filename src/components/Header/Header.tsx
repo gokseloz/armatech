@@ -20,6 +20,7 @@ const drawerWidth = 240;
 
 const productMenu = [
   { title: "TAKIM TUTUCULAR", link: "takim-tutucular" },
+  { title: "MANYETİK TABLALAR", link: "manyetik-tablalar" },
   {
     title: "VERO-S HIZLI PALET DEĞİŞTİRME SİSTEMİ",
     link: "vero-s-hizli-palet-degistirme-sistemleri",
@@ -28,7 +29,6 @@ const productMenu = [
   { title: "KUVVET BLOKLARI", link: "kuvvet-bloklari" },
   { title: "MENGENELER", link: "mengeneler" },
   { title: "KULELER", link: "kuleler" },
-  { title: "MANYETİK TABLALAR", link: "manyetik-tablalar" },
   { title: "VAKUM TABLA", link: "vakum-tabla" },
   { title: "ÇAPAK ALMA", link: "capak-alma" },
   { title: "OTOMATİK", link: "otomatik" },
