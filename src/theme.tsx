@@ -6,14 +6,10 @@ let theme = createTheme({
     primary: {
       main: "#000000",
     },
-
     text: {
       primary: "#c8c8c8",
       secondary: "#777777",
     },
-    // action: {
-    //   hover: "#a814e7",
-    // },
     divider: "#3c3c3c",
   },
   typography: {

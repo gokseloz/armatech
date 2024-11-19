@@ -10,7 +10,6 @@ const Banner = () => {
         height="100%"
         style={{
           objectFit: "cover",
-          objectPosition: "center",
         }}
       />
     </Box>
