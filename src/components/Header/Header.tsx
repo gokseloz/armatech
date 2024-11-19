@@ -31,7 +31,7 @@ const productMenu = [
   { title: "KULELER", link: "kuleler" },
   { title: "VAKUM TABLA", link: "vakum-tabla" },
   { title: "ÇAPAK ALMA", link: "capak-alma" },
-  { title: "OTOMATİK", link: "otomatik" },
+  { title: "OTOMATİK TALAŞLI İMALAT", link: "otomatik" },
 ];
 
 export default function DrawerAppBar() {

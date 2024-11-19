@@ -21,7 +21,7 @@ const Otomatik = () => {
   return (
     <Container>
       <Helmet>
-        <title>Otomatik - Parça ve Palet Otomasyonu</title>
+        <title>Otomatik Talaşlı İmalat - Parça ve Palet Otomasyonu</title>
         <meta
           name="description"
           content="SCHUNK'un R-C2 sistemi, parça ve palet otomasyonunun avantajlarını bir araya getirerek kurulum sürelerini azaltır ve iş parçası otomasyonu sağlar."
@@ -34,7 +34,7 @@ const Otomatik = () => {
 
       <HeroSection>
         <Typography variant="h3" gutterBottom textAlign="center">
-          Otomatik
+          Otomatik Talaşlı İmalat
         </Typography>
         <Typography variant="subtitle1" textAlign="center" mb={4}>
           Parça ve palet otomasyonu bir arada: Zekice kombinasyon ile zaman ve
@@ -87,7 +87,7 @@ const Otomatik = () => {
       <Stack sx={{ textAlign: "center", padding: 4, gap: 4 }}>
         <Box>
           <Typography variant="h4" gutterBottom>
-            Otomatik Performansını Keşfedin
+            Otomatik Talaşlı İmalat Performansını Keşfedin
           </Typography>
           <iframe
             width="80%"
