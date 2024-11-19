@@ -10,7 +10,16 @@ const Container = ({
   sx?: SxProps<Theme>;
 }) => {
   return (
-    <Box sx={sx} maxWidth="1440px" marginInline="auto" mt={12} px={5}>
+    <Box
+      sx={sx}
+      maxWidth="1440px"
+      marginInline="auto"
+      mt={12}
+      px={{
+        xs: 2,
+        sm: 5,
+      }}
+    >
       {children}
     </Box>
   );
