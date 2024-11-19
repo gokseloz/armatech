@@ -12,7 +12,7 @@ const Banner = () => {
       }}
     >
       <iframe
-        src="https://www.youtube.com/embed/OS_UW8W7oJ4?autoplay=1&mute=1&loop=1&playlist=OS_UW8W7oJ4&controls=1&rel=0"
+        src="https://www.youtube.com/embed/OS_UW8W7oJ4?autoplay=1&mute=1&loop=1&playlist=OS_UW8W7oJ4&controls=0&rel=0"
         width="100%"
         height="100%"
         style={{
