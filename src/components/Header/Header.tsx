@@ -73,6 +73,7 @@ export default function DrawerAppBar() {
 
   const handleAnaSayfaClick = () => {
     if (location.pathname === "/") {
+      console.log(location.pathname);
       const targetSection = document.getElementById("Ana Sayfa");
       if (!targetSection) return;
       const elementPosition =
@@ -123,13 +124,6 @@ export default function DrawerAppBar() {
     setAnchorEl(null);
   };
 
-  const handleLogoClick = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   const handleProductClick = (link: string) => {
     window.location.href = `/${link}`;
     handleClose();
@@ -166,7 +160,7 @@ export default function DrawerAppBar() {
           >
             <Box
               width="150px"
-              onClick={handleLogoClick}
+              onClick={handleAnaSayfaClick}
               sx={{ cursor: "pointer" }}
             >
               <img src={Logo} width="100%" />
