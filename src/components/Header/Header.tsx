@@ -1,7 +1,6 @@
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
@@ -9,16 +8,15 @@ import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Logo from "../../assets/images/armatech-logo.png";
+import LogoBLue from "../../assets/images/armatech-logo-blue.jpg";
 import theme from "../../theme";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Menu, MenuItem } from "@mui/material";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["Ana Sayfa", "Hakkımızda", "Ürünler", "İletişim"];
 
 const productMenu = [
   { title: "TAKIM TUTUCULAR", link: "takim-tutucular" },
@@ -52,24 +50,6 @@ export default function DrawerAppBar() {
   ) => {
     setAnchorEl(event.currentTarget);
   };
-
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
-      <Divider />
-      <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
-              <ListItemText primary={item} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
 
   const handleAnaSayfaClick = () => {
     if (location.pathname === "/") {
@@ -129,13 +109,60 @@ export default function DrawerAppBar() {
     handleClose();
   };
 
+  const drawer = (
+    <Box
+      onClick={handleDrawerToggle}
+      sx={{
+        textAlign: "center",
+        height: "100%",
+      }}
+    >
+      <Box
+        width="150px"
+        paddingY={1}
+        marginInline="auto"
+        onClick={handleAnaSayfaClick}
+        sx={{ cursor: "pointer" }}
+      >
+        <img src={LogoBLue} width="100%" />
+      </Box>
+      <List>
+        <ListItem onClick={handleAnaSayfaClick} disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemText primary="Ana Sayfa" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem onClick={handleHakkimizdaClick} disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemText primary="Hakkımızda" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            component="button"
+            onClick={handleProductMenuClick}
+            sx={{ textAlign: "center" }}
+          >
+            <ListItemText primary="Ürünler" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem onClick={handleIletisimClick} disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemText primary="İletişim" />
+          </ListItemButton>
+        </ListItem>
+      </List>
+    </Box>
+  );
+
   return (
     <>
       <AppBar
-        id="haha"
         component="nav"
         sx={{
-          padding: theme.spacing(1),
+          display: "grid",
+          placeItems: "center",
+          padding: theme.spacing(1, 3),
           backgroundColor: "transparent",
           background:
             "linear-gradient(90deg, rgb(45,56,138), rgb(0,174,239),rgb(45,56,138))",
@@ -146,62 +173,62 @@ export default function DrawerAppBar() {
             left: 0,
             width: "100%",
             height: "100%",
-            backgroundColor: "rgba(0, 0, 0, 0.2)", // Dark overlay
+            backgroundColor: "rgba(0, 0, 0, 0.2)",
           },
         }}
       >
-        <Toolbar>
+        <Box
+          width="100%"
+          maxWidth="1400px"
+          display="flex"
+          justifyContent="space-between"
+          alignItems="center"
+          zIndex={2}
+        >
           <Box
-            sx={{ display: { xs: "none", sm: "flex" } }}
-            justifyContent="space-between"
-            alignItems="center"
-            width="1400px"
-            marginInline="auto"
+            width="150px"
+            onClick={handleAnaSayfaClick}
+            sx={{ cursor: "pointer" }}
           >
-            <Box
-              width="150px"
-              onClick={handleAnaSayfaClick}
-              sx={{ cursor: "pointer" }}
-            >
-              <img src={Logo} width="100%" />
-            </Box>
-
-            <Box>
-              <Button onClick={handleAnaSayfaClick}>Ana Sayfa</Button>
-              <Button onClick={handleHakkimizdaClick}>Hakkımızda</Button>
-              <Button
-                aria-controls={open ? "menu-list-grow" : undefined}
-                aria-haspopup="true"
-                onClick={handleProductMenuClick}
-                sx={{ color: "white" }}
-              >
-                Ürünler
-              </Button>
-              <Button onClick={handleIletisimClick}>İletişim</Button>
-            </Box>
+            <img src={Logo} width="100%" />
           </Box>
-          <IconButton
-            onClick={handleDrawerToggle}
-            sx={{
-              mr: 2,
-              display: { sm: "none" },
-              backgroundColor: "white",
-              marginLeft: "auto",
-            }}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
+          <Toolbar sx={{ padding: 0, flexShrink: 0 }}>
+            <Box
+              sx={{ display: { xs: "none", sm: "flex" } }}
+              justifyContent="space-between"
+              alignItems="center"
+              marginInline="auto"
+            >
+              <Box>
+                <Button onClick={handleAnaSayfaClick}>Ana Sayfa</Button>
+                <Button onClick={handleHakkimizdaClick}>Hakkımızda</Button>
+                <Button
+                  aria-controls={open ? "menu-list-grow" : undefined}
+                  aria-haspopup="true"
+                  onClick={handleProductMenuClick}
+                  sx={{ color: "white" }}
+                >
+                  Ürünler
+                </Button>
+                <Button onClick={handleIletisimClick}>İletişim</Button>
+              </Box>
+            </Box>
+            <IconButton
+              onClick={handleDrawerToggle}
+              sx={{
+                mr: 2,
+                display: { sm: "none" },
+                color: "white",
+                marginLeft: "auto",
+              }}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </Box>
       </AppBar>
       {/* Product Menu */}
-      <Menu
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          "aria-labelledby": "basic-button",
-        }}
-      >
+      <Menu anchorEl={anchorEl} open={open} onClose={handleClose}>
         {productMenu.map((item) => (
           <MenuItem
             key={item.link}

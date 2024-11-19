@@ -1,36 +1,38 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import cncInAction from "../../assets/images/about-section/cnc-in-action.png";
+import urunCesitliligi from "../../assets/images/about-section/ürün-cesitliligi.png";
+import guvenilirlik from "../../assets/images/about-section/guvenilirlik.png";
+import musteri from "../../assets/images/about-section/musteri.png";
+
+import theme from "../../theme";
 
 const About = () => {
   const cards = [
     {
       id: 1,
       title: "Yenilikçi Teknoloji",
-      image:
-        "https://www.foley.com/wp-content/uploads/2023/09/tech-1371766825-1680x945.jpg",
+      image: cncInAction,
       description:
         "Metal işleme süreçlerinde hassasiyet ve verimlilik için en yüksek kalite standartlarına sahip iş bağlama sistemleri ve talaşlı imalat ekipmanları sunuyoruz.",
     },
     {
       id: 2,
       title: "Ürün Çeşitliliği ve Özel Çözümler",
-      image:
-        "https://www.foley.com/wp-content/uploads/2023/09/tech-1371766825-1680x945.jpg",
+      image: urunCesitliligi,
       description:
         "Takım tutuculardan robotlu besleme ünitelerine kadar geniş ürün yelpazemiz, CNC işleme alanındaki çeşitli ihtiyaçlara yönelik çözümler sunmak için tasarlandı",
     },
     {
       id: 3,
       title: "Müşteri Odaklı Yaklaşım",
-      image:
-        "https://www.foley.com/wp-content/uploads/2023/09/tech-1371766825-1680x945.jpg",
+      image: musteri,
       description:
         "Satış öncesi ve sonrası teknik destek hizmetlerimizle müşterilerimizin yanında yer alarak, rekabet gücünüzü artırmayı hedefliyoruz.",
     },
     {
       id: 4,
       title: "Güvenilirlik ve Hassasiyet",
-      image:
-        "https://www.foley.com/wp-content/uploads/2023/09/tech-1371766825-1680x945.jpg",
+      image: guvenilirlik,
       description:
         "Gelişmiş sistemlerimiz, maksimum verimlilik, doğruluk ve güvenilirlik sağlayarak üretim süreçlerinizi optimize etmenize yardımcı olur.",
     },
@@ -68,7 +70,14 @@ const About = () => {
         gap={4}
       >
         {cards.map((card) => (
-          <Card>
+          <Card
+            sx={{
+              boxShadow: theme.shadows[5],
+              "&:hover": {
+                boxShadow: theme.shadows[10],
+              },
+            }}
+          >
             <CardMedia
               sx={{ height: 140 }}
               component="img"

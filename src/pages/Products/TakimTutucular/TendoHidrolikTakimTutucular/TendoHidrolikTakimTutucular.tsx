@@ -241,7 +241,7 @@ const ProductCard = ({
           </CardContent>
         </Stack>
         {youtubeLink && (
-          <VideoContainer id="haha" onClick={handleOpen}>
+          <VideoContainer onClick={handleOpen}>
             <YouTubeIframe
               src={youtubeLink}
               title={title}

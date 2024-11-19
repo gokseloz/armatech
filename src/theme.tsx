@@ -1,7 +1,7 @@
 // src/theme.tsx
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
-const theme = createTheme({
+let theme = createTheme({
   palette: {
     primary: {
       main: "#000000",
@@ -49,18 +49,12 @@ const theme = createTheme({
           "&:hover": {
             backgroundColor: "#a814e7",
           },
-          // ...(ownerState.variant === "text" && {
-          //   color: "#000",
-          //   "&:hover": {
-          //     color: "#a814e7",
-          //   },
-          //   padding: "0",
-          //   backgroundColor: "transparent",
-          // }),
         }),
       },
     },
   },
 });
+
+theme = responsiveFontSizes(theme);
 
 export default theme;

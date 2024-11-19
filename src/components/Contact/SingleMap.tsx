@@ -18,7 +18,7 @@ const SimpleMap = () => {
   };
 
   return (
-    <Box data-testid="haha">
+    <Box>
       <MapContainer
         center={[latitude, longitude]}
         zoom={13}
