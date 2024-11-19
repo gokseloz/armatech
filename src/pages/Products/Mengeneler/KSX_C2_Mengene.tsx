@@ -5,6 +5,7 @@ import ksxC2Image from "../../../assets/images/mengeneler/ksx-c2.webp";
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -58,7 +59,7 @@ const KSX_C2_Mengene = () => {
           yüzeyin tam ve hassas işlenmesi için aktif çene çekme fonksiyonuna
           sahip 5-eksen mengene
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -104,7 +105,7 @@ const KSX_C2_Mengene = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: 4 }}>

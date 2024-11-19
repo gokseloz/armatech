@@ -5,6 +5,7 @@ import veroSNse3Image from "../../../../assets/images/vero-s-hizli-palet-degisti
 import { Helmet } from "react-helmet";
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -58,7 +59,7 @@ const VERO_S_NSE3_ve_NSEPlus = () => {
           yüksek çekme kuvvetleri sayesinde yüksek işleme parametrelerine sahip
           uygulamalar için ideal modüler hızlı değişim palet sistemleridir.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -108,7 +109,7 @@ const VERO_S_NSE3_ve_NSEPlus = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ textAlign: "center", padding: 4 }}>

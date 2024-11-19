@@ -4,6 +4,7 @@ import tendoLSS from "../../../../assets/images/takim-tutucular/tendo-hidrolik-t
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -42,15 +43,7 @@ const TendoLSS = () => {
           tasarlanmıştır. Dar açılarda işleme yapıldığında ve iş parçalarına
           ulaşması zor olduğunda mükemmel bir çözümdür.
         </Typography>
-        <Box
-          display="flex"
-          justifyContent="center"
-          gap={4}
-          px={8}
-          sx={{
-            flexDirection: { xs: "column", md: "row" },
-          }}
-        >
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -110,7 +103,7 @@ const TendoLSS = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
     </Container>
   );

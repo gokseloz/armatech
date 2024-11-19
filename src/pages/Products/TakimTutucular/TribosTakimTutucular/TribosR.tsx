@@ -4,6 +4,7 @@ import tribosRImage from "../../../../assets/images/takim-tutucular/tribos/tribo
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -59,7 +60,7 @@ const TribosR = () => {
           rijitlik ve sönümleme arasında optimum bir denge sunar. En iyi dinamik
           sapma özelliklerini sağlar.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -112,7 +113,7 @@ const TribosR = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

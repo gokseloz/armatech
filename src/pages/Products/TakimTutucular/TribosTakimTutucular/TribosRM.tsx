@@ -4,6 +4,7 @@ import tribosRMImage from "../../../../assets/images/takim-tutucular/tribos/trib
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -41,7 +42,7 @@ const TribosRM = () => {
           TRIBOS-RM, mikro kesmeden 85.000 RPM devir ve daha yükseğine kadar
           güçlü HSC işlemi için uygun bir takım tutucudur.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -90,7 +91,7 @@ const TribosRM = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
     </Container>
   );

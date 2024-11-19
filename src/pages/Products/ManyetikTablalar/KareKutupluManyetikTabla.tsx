@@ -4,6 +4,7 @@ import kareKutupluManyetikTablaImage from "../../../assets/images/manyetik-tabla
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -39,7 +40,7 @@ const KareKutupluManyetikTabla = () => {
           Frezeleme uygulamaları için güçlü kesme işlemleri sunan
           elektro-permanent manyetik tabla sistemleri.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -91,7 +92,7 @@ const KareKutupluManyetikTabla = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

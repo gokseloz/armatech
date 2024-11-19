@@ -5,6 +5,7 @@ import kscFImage from "../../../assets/images/mengeneler/ksc-f.webp";
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -57,7 +58,7 @@ const KSC_F_Mengene = () => {
           SCHUNK KONTEC KSC-F tek çene hareketli mengeneler, paletleme
           sistemlerini donatmak için mükemmel bir şekilde uygundur.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -103,7 +104,7 @@ const KSC_F_Mengene = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: 4 }}>

@@ -4,6 +4,7 @@ import speedyBatImage from "../../../assets/images/manyetik-tablalar/speedy-bat.
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -38,7 +39,7 @@ const SpeedyBat = () => {
         <Typography variant="subtitle1" textAlign="center" mb={4}>
           Pil Gücüyle Çalışan Elektrokalıcı Manyetik Kaldıraç
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -85,7 +86,7 @@ const SpeedyBat = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

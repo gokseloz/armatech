@@ -5,6 +5,7 @@ import nsl3TurnImage from "../../../../assets/images/vero-s-hizli-palet-degistir
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -60,7 +61,7 @@ const VEROS_NSL3_Turn = () => {
           mill/turn merkezlerinde güvenilirlik ve yüksek performans arayan
           kullanıcılar için ideal bir çözümdür.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -110,7 +111,7 @@ const VEROS_NSL3_Turn = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

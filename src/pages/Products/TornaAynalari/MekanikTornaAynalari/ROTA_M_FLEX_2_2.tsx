@@ -5,6 +5,7 @@ import rotaMFlexImage from "../../../../assets/images/torna-aynalari/mekanik-tor
 import { Helmet } from "react-helmet";
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -60,7 +61,7 @@ const ROTA_M_FLEX_2_2 = () => {
           torna aynası. Özellikle yuvarlak, kübik ve geometrik iş parçaları için
           uygundur.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -113,7 +114,7 @@ const ROTA_M_FLEX_2_2 = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

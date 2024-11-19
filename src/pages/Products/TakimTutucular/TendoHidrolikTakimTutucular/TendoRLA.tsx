@@ -4,6 +4,7 @@ import tendoRLA from "../../../../assets/images/takim-tutucular/tendo-hidrolik-t
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -42,15 +43,7 @@ const TendoRLA = () => {
           için mikron-hassas konumlandırma sağlayarak kurulum süresini en aza
           indiren bir hidrolik takım tutucudur.
         </Typography>
-        <Box
-          display="flex"
-          justifyContent="center"
-          gap={4}
-          px={8}
-          sx={{
-            flexDirection: { xs: "column", md: "row" },
-          }}
-        >
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -113,7 +106,7 @@ const TendoRLA = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
     </Container>
   );

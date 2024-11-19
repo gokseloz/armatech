@@ -4,6 +4,7 @@ import tendoSilver from "../../../../assets/images/takim-tutucular/tendo-hidroli
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -54,13 +55,7 @@ const TendoSilver = () => {
           takımı tutma işlemlerinde en iyi fiyat/performans oranını sağlar.
           Güvenilir ve hassas bir hidrolik takım tutucudur.
         </Typography>
-        <Box
-          display="flex"
-          justifyContent="center"
-          gap={4}
-          px={8}
-          flexWrap="wrap"
-        >
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -113,7 +108,7 @@ const TendoSilver = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

@@ -5,6 +5,7 @@ import rotaSFlexImage from "../../../../assets/images/torna-aynalari/mekanik-tor
 import { Helmet } from "react-helmet";
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -60,7 +61,7 @@ const ROTA_S_FLEX = () => {
           merkezleri için özel olarak tasarlanmıştır. Geniş sıkma aralığı ve
           hızlı çene ayarı ile yüksek verimlilik sağlar.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -110,7 +111,7 @@ const ROTA_S_FLEX = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

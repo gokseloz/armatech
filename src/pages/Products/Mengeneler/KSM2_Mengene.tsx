@@ -5,6 +5,7 @@ import ksm2Image from "../../../assets/images/mengeneler/ksm2.webp";
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -57,7 +58,7 @@ const KSM2_Mengene = () => {
           Çoklu sıkma mengenesi KSM2, birçok küçük veya büyük iş parçası için
           çene hızlı değiştirme sistemidir.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -104,7 +105,7 @@ const KSM2_Mengene = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: 4 }}>

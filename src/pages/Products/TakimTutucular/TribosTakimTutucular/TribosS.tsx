@@ -4,6 +4,7 @@ import tribosSImage from "../../../../assets/images/takim-tutucular/tribos/tribo
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -59,7 +60,7 @@ const TribosS = () => {
           bile hassasiyet sunar. Hassas iş parçası işleme uygulamaları için
           idealdir.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -116,7 +117,7 @@ const TribosS = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

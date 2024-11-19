@@ -5,6 +5,7 @@ import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import rotaNCFPlus2Image from "../../../../assets/images/torna-aynalari/hidrolik-torna-aynalari/rota-ncf-plus-2.webp";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -57,7 +58,7 @@ const ROTA_NCF_PLUS_2 = () => {
           Ağırlığı Azaltılmış Santrifüj Kuvveti Etkili 3-Çeneli Hassas Güç Torna
           Aynası
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -97,7 +98,7 @@ const ROTA_NCF_PLUS_2 = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ textAlign: "center", padding: 4 }}>

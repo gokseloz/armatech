@@ -4,6 +4,7 @@ import tendoECompact from "../../../../assets/images/takim-tutucular/tendo-hidro
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -57,7 +58,7 @@ const TendoECompactDetailPage = () => {
           diş açma gibi uygulamalarda üstün performans sunar. Kesici takım
           ömrünü %300'e kadar uzatır.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -106,7 +107,7 @@ const TendoECompactDetailPage = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ textAlign: "center", padding: 4 }}>

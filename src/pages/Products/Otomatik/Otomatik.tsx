@@ -4,6 +4,7 @@ import otomatikImage from "../../../assets/images/otomatik/otomatik.jpg";
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -39,7 +40,7 @@ const Otomatik = () => {
           Parça ve palet otomasyonu bir arada: Zekice kombinasyon ile zaman ve
           maliyet tasarrufu
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -81,7 +82,7 @@ const Otomatik = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
     </Container>
   );

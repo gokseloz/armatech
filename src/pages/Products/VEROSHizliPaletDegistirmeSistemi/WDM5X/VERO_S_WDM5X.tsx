@@ -5,6 +5,7 @@ import wdm5xImage from "../../../../assets/images/vero-s-hizli-palet-degistirme-
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -43,7 +44,7 @@ const VERO_S_WDM5X = () => {
           beş taraflı işleme süreçlerini optimize eder ve yüksek hassasiyetli
           işleme çözümleri sunar.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -93,7 +94,7 @@ const VERO_S_WDM5X = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
     </Container>
   );

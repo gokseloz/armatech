@@ -5,6 +5,7 @@ import tandemKRPImage from "../../../assets/images/kuvvet-bloklari/tandem-krp.we
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -39,7 +40,7 @@ const TANDEM_KRP = () => {
         <Typography variant="subtitle1" textAlign="center" mb={4}>
           Palet Otomasyonu: Esnek, hassas ve gelişmiş sıkma yöntemleri sunar.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -80,7 +81,7 @@ const TANDEM_KRP = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

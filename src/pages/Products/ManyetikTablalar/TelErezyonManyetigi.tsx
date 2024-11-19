@@ -4,6 +4,7 @@ import telErozyonImage from "../../../assets/images/manyetik-tablalar/tel-erozyo
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -38,7 +39,7 @@ const TelErozyonManyetigi = () => {
         <Typography variant="subtitle1" textAlign="center" mb={4}>
           EDM Uygulamaları için Elektro-Permanent Manyetik Modüller
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -79,7 +80,7 @@ const TelErozyonManyetigi = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

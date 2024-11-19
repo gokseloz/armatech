@@ -5,6 +5,7 @@ import ksxImage from "../../../assets/images/mengeneler/ksx.webp";
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -56,7 +57,7 @@ const KSX_Mengene = () => {
         <Typography variant="subtitle1" textAlign="center" mb={4}>
           5-Eksen Tam/Simültane İşleme İçin Mengene
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -102,7 +103,7 @@ const KSX_Mengene = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: 4 }}>

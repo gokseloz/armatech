@@ -71,6 +71,7 @@ const About = () => {
       >
         {cards.map((card) => (
           <Card
+            key={card.id}
             sx={{
               boxShadow: theme.shadows[5],
               "&:hover": {

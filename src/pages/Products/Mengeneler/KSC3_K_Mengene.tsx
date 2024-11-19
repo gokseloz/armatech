@@ -5,6 +5,7 @@ import ksc3KImage from "../../../assets/images/mengeneler/ksc3-k.webp";
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -57,7 +58,7 @@ const KSC3_K_Mengene = () => {
           Altıncı eksenin hassas işlenmesi için son derece kompakt bir tek çene
           hareketli mengene.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -103,7 +104,7 @@ const KSC3_K_Mengene = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: 4 }}>

@@ -5,6 +5,7 @@ import tandemKSH3Image from "../../../assets/images/kuvvet-bloklari/tandem-ksh3.
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -57,7 +58,7 @@ const TANDEM_KSH3 = () => {
           SCHUNK TANDEM KSH3, yüksek sıkma kuvvetleri ve yeni teknik özellikler
           sunan, kompakt tasarıma sahip hidrolik 2-çeneli kuvvet bloklarıdır.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer >
           <Box
             sx={{
               flex: 1,
@@ -102,7 +103,7 @@ const TANDEM_KSH3 = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

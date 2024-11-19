@@ -5,6 +5,7 @@ import veroSTombstonesImage from "../../../assets/images/kuleler/vero-s-tombston
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -40,7 +41,7 @@ const VERO_S_Tombstones = () => {
           Tombstoneler, VERO-S ile birleştirilerek daha büyük esneklik ve
           azaltılmış kurulum maliyetleri sağlar.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -82,7 +83,7 @@ const VERO_S_Tombstones = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

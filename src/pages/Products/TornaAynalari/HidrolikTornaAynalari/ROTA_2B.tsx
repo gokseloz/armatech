@@ -5,6 +5,7 @@ import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import rota2BImage from "../../../../assets/images/torna-aynalari/hidrolik-torna-aynalari/rota-2b.webp";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -56,7 +57,7 @@ const ROTA_2B = () => {
         <Typography variant="subtitle1" textAlign="center" mb={4}>
           Uzun Stroklu 2 Çeneli Güç Torna Aynası
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -96,7 +97,7 @@ const ROTA_2B = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ textAlign: "center", padding: 4 }}>

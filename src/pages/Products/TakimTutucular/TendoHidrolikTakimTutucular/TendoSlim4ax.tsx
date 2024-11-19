@@ -4,6 +4,7 @@ import tendoSlim4ax from "../../../../assets/images/takim-tutucular/tendo-hidrol
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -58,15 +59,7 @@ const TendoSlim4ax = () => {
           TENDO Slim 4ax, eksenel işleme ve radial ince işleme için mükemmel bir
           hidrolik takım tutucudur. Uzun takım ömrü ve yüksek esneklik sağlar.
         </Typography>
-        <Box
-          display="flex"
-          justifyContent="center"
-          gap={4}
-          px={8}
-          sx={{
-            flexDirection: { xs: "column", md: "row" },
-          }}
-        >
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -126,7 +119,7 @@ const TendoSlim4ax = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

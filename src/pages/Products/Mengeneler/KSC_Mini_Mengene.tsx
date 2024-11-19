@@ -5,6 +5,7 @@ import kscMiniImage from "../../../assets/images/mengeneler/ksc-mini.webp";
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -57,7 +58,7 @@ const KSC_Mini_Mengene = () => {
           Küçük iş parçalarınız için kompakt mengene, çene hızlı değişim sistemi
           ve sınıfındaki yüksek sıkma kuvvetlerine sahiptir.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -101,7 +102,7 @@ const KSC_Mini_Mengene = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: 4 }}>

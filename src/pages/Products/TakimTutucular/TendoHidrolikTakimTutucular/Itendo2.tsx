@@ -5,6 +5,7 @@ import itendo2 from "../../../../assets/images/takim-tutucular/tendo-hidrolik-ta
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -60,15 +61,7 @@ const iTendo2 = () => {
           optimizasyonu için hassas stabilite değerleri sağlar. Üç farklı
           varyant ile sunulur: Pad, Easy Connect ve Easy Monitor.
         </Typography>
-        <Box
-          display="flex"
-          justifyContent="center"
-          gap={4}
-          px={8}
-          sx={{
-            flexDirection: { xs: "column", md: "row" },
-          }}
-        >
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -117,7 +110,7 @@ const iTendo2 = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

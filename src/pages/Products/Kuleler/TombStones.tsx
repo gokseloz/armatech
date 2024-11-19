@@ -4,6 +4,7 @@ import tombstonesImage from "../../../assets/images/kuleler/tombstones.webp";
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -39,7 +40,7 @@ const TombStones = () => {
           SCHUNK TombStones, geniş sıkma seçenekleri ve yükleme yoğunluklarıyla
           makine çalışma sürelerini önemli ölçüde artırır.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -74,7 +75,7 @@ const TombStones = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ textAlign: "center", padding: 4 }}>

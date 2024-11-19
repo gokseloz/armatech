@@ -4,6 +4,7 @@ import kaldiracImage from "../../../assets/images/manyetik-tablalar/kaldirac.web
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -39,7 +40,7 @@ const Kaldirac = () => {
           Yüksek taşıma kapasitesi ve güvenli tutma gücü sağlayan manuel
           kaldıraç manyetikleri.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer >
           <Box
             sx={{
               flex: 1,
@@ -79,7 +80,7 @@ const Kaldirac = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

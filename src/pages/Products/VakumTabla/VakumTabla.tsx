@@ -4,6 +4,7 @@ import vakumTablaImage from "../../../assets/images/vakum-tabla/vakum-tabla-merg
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -56,7 +57,7 @@ const VakumTabla = () => {
           Modüler Vakumlu Matris Plakası, Düz İş Parçalarını ve Düz Tabanlı İş
           Parçalarını İçindir.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -117,7 +118,7 @@ const VakumTabla = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

@@ -5,6 +5,7 @@ import rotaSPlusImage from "../../../../assets/images/torna-aynalari/mekanik-tor
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -61,7 +62,7 @@ const ROTA_S_Plus_2_0 = () => {
           edilmiş tasarımı ile üretim süreçlerinizi hızlandırır ve maliyetleri
           düşürür.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -113,7 +114,7 @@ const ROTA_S_Plus_2_0 = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

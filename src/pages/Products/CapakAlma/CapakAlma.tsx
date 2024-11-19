@@ -4,6 +4,7 @@ import capakAlmaImage from "../../../assets/images/capak-alma/capak-alma-merged.
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -39,7 +40,7 @@ const CapakAlma = () => {
           SCHUNK çapak alma araçları, çeşitli metallerin yanı sıra plastiklerin
           de yeniden işlenmesine olanak tanır.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -79,7 +80,7 @@ const CapakAlma = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ textAlign: "center", padding: 4 }}>

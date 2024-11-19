@@ -4,6 +4,7 @@ import tendoPlatinum from "../../../../assets/images/takim-tutucular/tendo-hidro
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -55,18 +56,10 @@ const TendoPlatinum = () => {
           TENDO Platinum
         </Typography>
         <Typography variant="subtitle1" textAlign="center" mb={4}>
-          TENDO Platinum, standart makine takım millerine uyumlu hassas
-          ve çok yönlü bir hidrolik takım tutucusudur. DIN 69882-7'ye uygundur.
+          TENDO Platinum, standart makine takım millerine uyumlu hassas ve çok
+          yönlü bir hidrolik takım tutucusudur. DIN 69882-7'ye uygundur.
         </Typography>
-        <Box
-          display="flex"
-          justifyContent="center"
-          gap={4}
-          px={8}
-          sx={{
-            flexDirection: { xs: "column", md: "row" },
-          }}
-        >
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -115,7 +108,7 @@ const TendoPlatinum = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

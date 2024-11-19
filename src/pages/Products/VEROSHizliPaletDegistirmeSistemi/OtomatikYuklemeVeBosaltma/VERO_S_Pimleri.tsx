@@ -5,6 +5,7 @@ import veroSPimImage from "../../../../assets/images/vero-s-hizli-palet-degistir
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -43,7 +44,7 @@ const VERO_S_Pimleri = () => {
           modülleri ile güvenilir ve hassas bir şekilde konumlandırılmasını
           sağlar.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -86,7 +87,7 @@ const VERO_S_Pimleri = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Additional Details Section */}

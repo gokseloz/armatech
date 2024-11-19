@@ -80,7 +80,7 @@ const TornaAynalari = () => {
     <Container>
       <Section>
         <Typography variant="h4">Torna Aynaları</Typography>
-        <CardsContainer>
+        <CardsContainer flexDirection={{ xs: "column", sm: "row" }}>
           <StyledCard onClick={navigateToHidrolik}>
             <StyledCardMediaWrapper>
               <CardMedia

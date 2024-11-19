@@ -4,6 +4,7 @@ import tendoZero from "../../../../assets/images/takim-tutucular/tendo-hidrolik-
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -59,15 +60,7 @@ const TendoZeroDetailPage = () => {
           gerektiğinde veya mükemmel çalışma hassasiyeti şartı istenilen
           prosesler için uyumludur.
         </Typography>
-        <Box
-          display="flex"
-          justifyContent="center"
-          gap={4}
-          px={8}
-          sx={{
-            flexDirection: { xs: "column", md: "row" },
-          }}
-        >
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -121,7 +114,7 @@ const TendoZeroDetailPage = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

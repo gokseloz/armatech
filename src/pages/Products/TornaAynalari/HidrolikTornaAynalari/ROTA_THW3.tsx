@@ -5,6 +5,7 @@ import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import rotaTHW3Image from "../../../../assets/images/torna-aynalari/hidrolik-torna-aynalari/rota-thw3.webp";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -58,7 +59,7 @@ const ROTA_THW3 = () => {
         <Typography variant="subtitle1" textAlign="center" mb={4}>
           3-Çeneli Güç Torna Aynası - ROTA THW3
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -102,7 +103,7 @@ const ROTA_THW3 = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       {/* Video Section */}

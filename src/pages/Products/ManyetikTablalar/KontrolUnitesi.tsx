@@ -4,6 +4,7 @@ import kontrolUnitesiImage from "../../../assets/images/manyetik-tablalar/kontro
 import { Helmet } from "react-helmet";
 import Container from "../../../components/Container";
 import theme from "../../../theme";
+import ImageAndFeaturesContainer from "../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 const HeroSection = styled(Box)({
   padding: "40px 20px",
@@ -38,7 +39,7 @@ const KontrolUnitesi = () => {
         <Typography variant="subtitle1" textAlign="center" mb={4}>
           Modüler Sistem ile Gelişmiş Manyetik Kontrol
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -81,7 +82,7 @@ const KontrolUnitesi = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
 
       <Box sx={{ padding: "40px 20px" }}>

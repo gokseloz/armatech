@@ -4,6 +4,7 @@ import tribosMiniImage from "../../../../assets/images/takim-tutucular/tribos/tr
 import Container from "../../../../components/Container";
 import theme from "../../../../theme";
 import { Helmet } from "react-helmet";
+import ImageAndFeaturesContainer from "../../../../components/ProductDetail/ImageAndFeaturesContainer";
 
 // Styled Components
 const HeroSection = styled(Box)({
@@ -41,7 +42,7 @@ const TribosMini = () => {
           TRIBOS-Mini, tıbbi teknoloji, saatçilik ve hassas kalıp yapımı gibi
           endüstriler için özel olarak tasarlanmış bir sıkma sistemi sunar.
         </Typography>
-        <Box display="flex" justifyContent="center" gap={4} px={8}>
+        <ImageAndFeaturesContainer>
           <Box
             sx={{
               flex: 1,
@@ -90,7 +91,7 @@ const TribosMini = () => {
               </Typography>
             </Stack>
           </Box>
-        </Box>
+        </ImageAndFeaturesContainer>
       </HeroSection>
     </Container>
   );
