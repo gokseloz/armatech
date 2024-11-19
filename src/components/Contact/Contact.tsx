@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Link, Box } from "@mui/material";
+import { Typography, Link, Box, Stack } from "@mui/material";
 import { styled } from "@mui/system";
 import RoomIcon from "@mui/icons-material/Room";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -23,10 +23,15 @@ const ContactDetail = styled(Box)({
 const Contact: React.FC = () => {
   return (
     <ContactSection id="İletişim">
-      <Typography variant="h4" gutterBottom>
+      <Typography
+        textAlign="center"
+        variant="h3"
+        gutterBottom
+        fontWeight="bold"
+      >
         İletişim
       </Typography>
-      <Box>
+      <Stack alignItems="center">
         <ContactDetail>
           <RoomIcon color="primary" fontSize="small" />
           <Typography variant="body1" ml={1}>
@@ -74,7 +79,7 @@ const Contact: React.FC = () => {
             </Link>
           </Typography>
         </ContactDetail>
-      </Box>
+      </Stack>
       <SingleMap />
     </ContactSection>
   );

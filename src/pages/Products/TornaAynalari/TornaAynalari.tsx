@@ -18,14 +18,11 @@ const Section = styled(Box)({
   alignItems: "center",
 });
 
-const Heading = styled(Typography)({
-  marginBottom: theme.spacing(3),
-});
-
 const CardsContainer = styled(Box)({
   display: "flex",
   gap: theme.spacing(4),
   flexWrap: "wrap",
+  paddingBlock: theme.spacing(3),
 });
 
 const StyledCard = styled(Card)({
@@ -82,7 +79,7 @@ const TornaAynalari = () => {
   return (
     <Container>
       <Section>
-        <Heading variant="h4">Torna Aynaları</Heading>
+        <Typography variant="h4">Torna Aynaları</Typography>
         <CardsContainer>
           <StyledCard onClick={navigateToHidrolik}>
             <StyledCardMediaWrapper>

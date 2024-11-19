@@ -17,14 +17,11 @@ const Section = styled(Box)({
   alignItems: "center",
 });
 
-const Heading = styled(Typography)({
-  marginBottom: theme.spacing(3),
-});
-
 const CardsContainer = styled(Box)({
   display: "flex",
   gap: theme.spacing(4),
   flexWrap: "wrap",
+  paddingBlock: theme.spacing(3),
 });
 
 const StyledCard = styled(Card)({
@@ -79,7 +76,9 @@ const VeroSHizliPaletDegistirmeSistemi = () => {
   return (
     <Container>
       <Section>
-        <Heading variant="h4">VERO-S HIZLI PALET DEĞİŞTİRME SİSTEMİ</Heading>
+        <Typography variant="h4">
+          VERO-S HIZLI PALET DEĞİŞTİRME SİSTEMİ
+        </Typography>
         <CardsContainer>
           <StyledCard onClick={handleNavigateToNSE3}>
             <StyledCardMediaWrapper>

@@ -47,7 +47,7 @@ let theme = createTheme({
         root: () => ({
           color: "#fff",
           "&:hover": {
-            backgroundColor: "#a814e7",
+            backgroundColor: "#1f73b7",
           },
         }),
       },
