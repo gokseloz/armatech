@@ -36,6 +36,22 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+
+      //   .then(() => {
+      //     setSnackbarOpen(true);
+      //     setFormData({ name: "", email: "", message: "" });
+      //   })
+      .catch((error) => alert(error));
+  };
+
   return (
     <FormContainer id="bize-ulasin">
       <Typography variant="h5" textAlign="center" marginBottom={2}>
@@ -44,8 +60,9 @@ const ContactForm = () => {
       <form
         name="contact"
         method="POST"
-        action="/success.html"
+        action="/success"
         data-netlify="true"
+        onSubmit={handleSubmit}
       >
         {/* Hidden input for Netlify form name */}
         <input type="hidden" name="form-name" value="contact" />
