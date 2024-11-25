@@ -20,10 +20,16 @@ export async function handler(event) {
 
   await resend.emails
     .send({
-      from: email,
+      from: "goksel.hotmail.com",
       to: "armatechemail@gmail.com",
+      reply_to: email,
       subject: `New message from ${name}`,
-      html: `<p>${message}</p>`,
+      html: `
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Message:</strong></p>
+      <p>${message}</p>
+    `,
     })
     .then((response) => {
       console.log("Email sent!", response);
