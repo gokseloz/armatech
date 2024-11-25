@@ -1,12 +1,5 @@
 import React, { useState } from "react";
-import {
-  Box,
-  Button,
-  TextField,
-  Typography,
-  CircularProgress,
-  Snackbar,
-} from "@mui/material";
+import { Box, Button, TextField, Typography, Snackbar } from "@mui/material";
 import styled from "@mui/system/styled";
 import theme from "../../theme";
 
@@ -35,7 +28,6 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
-  const [loading, setLoading] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
 
   const handleChange = (
@@ -44,32 +36,15 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
-    // Simulate success snackbar
-    try {
-      setSnackbarOpen(true);
-      setFormData({ name: "", email: "", message: "" }); // Clear form
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <FormContainer id="bize-ulasin">
       <Typography variant="h5" textAlign="center" marginBottom={2}>
         İletişim Formu
       </Typography>
       <form
-        onSubmit={handleSubmit}
         name="contact" // This defines the form name in Netlify UI
         data-netlify="true" // Enable Netlify form processing
         method="POST"
-        action="/success" // Optional: Redirect to a custom success page
       >
         {/* Hidden input for Netlify form name */}
         <input type="hidden" name="form-name" value="contact" />
@@ -107,11 +82,8 @@ const ContactForm = () => {
         <StyledButton
           type="submit"
           variant="contained"
-          disabled={loading}
           fullWidth
-        >
-          {loading ? <CircularProgress size={24} color="inherit" /> : "Gönder"}
-        </StyledButton>
+        ></StyledButton>
       </form>
       <Snackbar
         open={snackbarOpen}
