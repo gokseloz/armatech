@@ -12,11 +12,12 @@ export async function handler(event) {
 
   const resend = new Resend("re_PcxNN4qT_8AhGDUG4jj1noW186msVjNbF");
 
+  console.log("Sending email...");
+
   resend.emails.send({
     from: "goksel_ozkazanc_08@hotmail.com",
     to: "armatechemail@gmail.com",
     subject: "Hello World",
     html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
   });
-
 }
