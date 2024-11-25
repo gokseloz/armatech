@@ -1,7 +1,6 @@
 import { createTransport } from "nodemailer";
 
 export async function handler(event) {
-  // Only allow POST requests
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -9,28 +8,27 @@ export async function handler(event) {
     };
   }
 
-  // Parse the form data
   const { name, email, message } = JSON.parse(event.body);
 
-  // Create a Nodemailer transporter
+  // Configure the Nodemailer transporter for Outlook
   const transporter = createTransport({
-    service: "gmail",
+    host: "smtp.office365.com", // Outlook SMTP server
+    port: 587, // Port for TLS
+    secure: false, // Use TLS (not SSL)
     auth: {
-      user: process.env.REACT_APP_GMAIL_USER,
-      pass: process.env.REACT_APP_GMAIL_PASS,
+      user: process.env.REACT_APP_OUTLOOK, // Use your Outlook email
+      pass: process.env.REACT_APP_OUTLOOK_PASS, // Use your Outlook password
     },
   });
 
-  // Email options
   const mailOptions = {
-    from: `"${name}" <${email}>`,
-    to: process.env.GMAIL_USER,
+    from: `"${name}" <${email}>`, // Sender details
+    to: process.env.REACT_APP_OUTLOOK, // Your Outlook email address
     subject: "New Contact Form Submission",
-    text: `You have a new message from ${name} (${email}):\n\n${message}`,
+    text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
   };
 
   try {
-    // Send the email
     await transporter.sendMail(mailOptions);
     return {
       statusCode: 200,
@@ -40,7 +38,7 @@ export async function handler(event) {
     console.error("Error sending email:", error);
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: "Failed to send email" }),
+      body: JSON.stringify({ message: "Failed to send email." }),
     };
   }
 }
