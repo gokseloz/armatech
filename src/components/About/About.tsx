@@ -46,7 +46,7 @@ const About = () => {
       alignItems="center"
     >
       <Typography variant="h3" my={4} fontWeight="bold">
-        Hakkimizda
+        Hakkımızda
       </Typography>
       <Typography textAlign="center">
         <b>ARMATECH MAKİNA SAN. TİC. LTD. ŞTİ.</b> metal işleme ve CNC
