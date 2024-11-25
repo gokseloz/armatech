@@ -104,7 +104,7 @@ const App: React.FC = () => {
           >
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/thanks" element={<SuccessPage />} />
+              <Route path="/success" element={<SuccessPage />} />
               <Route path="/takim-tutucular" element={<TakimTutucular />} />
               {/* Tendo Hidrolik Takım Tutucular */}
               <Route
