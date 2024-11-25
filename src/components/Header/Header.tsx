@@ -100,6 +100,22 @@ export default function DrawerAppBar() {
     }
   };
 
+  const handleBizeUlasinlick = () => {
+    if (location.pathname === "/") {
+      const targetSection = document.getElementById("bize-ulasin");
+      if (!targetSection) return;
+      const elementPosition =
+        targetSection.getBoundingClientRect().top + window.scrollY;
+      const offsetPosition = elementPosition - 64;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    } else {
+      navigate("/");
+    }
+  };
+
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -211,6 +227,7 @@ export default function DrawerAppBar() {
                   Ürünler
                 </Button>
                 <Button onClick={handleIletisimClick}>İletişim</Button>
+                <Button onClick={handleBizeUlasinlick}>Bize Ulaşın</Button>
               </Box>
             </Box>
             <IconButton

@@ -7,7 +7,7 @@ let theme = createTheme({
       main: "#000000",
     },
     text: {
-      primary: "#c8c8c8",
+      primary: "#000000",
       secondary: "#777777",
     },
     divider: "#3c3c3c",
