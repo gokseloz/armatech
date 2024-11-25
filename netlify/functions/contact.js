@@ -1,6 +1,8 @@
 import { Resend } from "resend";
 
 export async function handler(event) {
+  console.log("event", event);
+
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -9,6 +11,8 @@ export async function handler(event) {
   }
 
   const { name, email, message } = JSON.parse(event.body);
+
+  console.log("Name:", name);
 
   const resend = new Resend("re_PcxNN4qT_8AhGDUG4jj1noW186msVjNbF");
 
