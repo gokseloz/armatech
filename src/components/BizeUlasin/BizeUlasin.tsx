@@ -41,12 +41,10 @@ const ContactForm = () => {
       <Typography variant="h5" textAlign="center" marginBottom={2}>
         İletişim Formu
       </Typography>
-      <form
-        name="contact" // This defines the form name in Netlify UI
-        data-netlify="true" // Enable Netlify form processing
-        method="POST"
-        action="/success"
-      >
+      <form name="contact" data-netlify="true">
+        {/* Hidden input for Netlify form name */}
+        <input type="hidden" name="form-name" value="contact" />
+
         <TextField
           label="Adınız"
           name="name"
