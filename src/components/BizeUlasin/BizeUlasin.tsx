@@ -36,20 +36,28 @@ const ContactForm = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log("Form successfully submitted"))
 
-      //   .then(() => {
-      //     setSnackbarOpen(true);
-      //     setFormData({ name: "", email: "", message: "" });
-      //   })
-      .catch((error) => alert(error));
+    try {
+      const response = await fetch("/.netlify/functions/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSnackbarOpen(true); // Show success message
+        setFormData({ name: "", email: "", message: "" }); // Reset form
+      } else {
+        const errorData = await response.json();
+        console.error("Error:", errorData.message);
+        alert("Mesaj gönderilirken bir hata oluştu.");
+      }
+    } catch (error) {
+      console.error("Request error:", error);
+      alert("Mesaj gönderilirken bir hata oluştu.");
+    }
   };
 
   return (
@@ -57,13 +65,7 @@ const ContactForm = () => {
       <Typography variant="h5" textAlign="center" marginBottom={2}>
         İletişim Formu
       </Typography>
-      <form
-        name="contact"
-        method="POST"
-        action="/success"
-        data-netlify="true"
-        onSubmit={handleSubmit}
-      >
+      <form onSubmit={handleSubmit}>
         {/* Hidden input for Netlify form name */}
         <input type="hidden" name="form-name" value="contact" />
 
