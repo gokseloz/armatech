@@ -18,8 +18,8 @@ export async function handler(event) {
 
   console.log("Sending email...");
 
-  resend.emails.send({
-    from: "goksel_ozkazanc_08@hotmail.com",
+  await resend.emails.send({
+    from: "onboarding@resend.dev",
     to: "armatechemail@gmail.com",
     subject: "Hello World",
     html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
