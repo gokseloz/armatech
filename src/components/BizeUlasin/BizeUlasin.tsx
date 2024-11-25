@@ -1,7 +1,15 @@
 import React, { useState } from "react";
-import { Box, Button, TextField, Typography, Snackbar } from "@mui/material";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  Snackbar,
+  Alert,
+} from "@mui/material";
 import styled from "@mui/system/styled";
 import theme from "../../theme";
+import { useSnackbar } from "notistack";
 
 const FormContainer = styled(Box)({
   maxWidth: "600px",
@@ -23,6 +31,7 @@ const StyledButton = styled(Button)({
 });
 
 const ContactForm = () => {
+  const { enqueueSnackbar } = useSnackbar();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -39,6 +48,12 @@ const ContactForm = () => {
   const handleSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
+    if (!formData.name || !formData.email || !formData.message) {
+      return enqueueSnackbar("Lütfen tüm alanları doldurun.", {
+        variant: "error",
+      });
+    }
+
     try {
       const response = await fetch("/.netlify/functions/contact", {
         method: "POST",
@@ -47,16 +62,22 @@ const ContactForm = () => {
       });
 
       if (response.ok) {
-        setSnackbarOpen(true); // Show success message
+        enqueueSnackbar("Mesajınız başarıyla gönderildi!", {
+          variant: "success",
+        });
         setFormData({ name: "", email: "", message: "" }); // Reset form
       } else {
         const errorData = await response.json();
         console.error("Error:", errorData.message);
-        alert("Mesaj gönderilirken bir hata oluştu.");
+        enqueueSnackbar("Mesaj gönderilirken bir hata oluştu.", {
+          variant: "error",
+        });
       }
     } catch (error) {
       console.error("Request error:", error);
-      alert("Mesaj gönderilirken bir hata oluştu.");
+      enqueueSnackbar("Mesaj gönderilirken bir hata oluştu.", {
+        variant: "error",
+      });
     }
   };
 
@@ -65,7 +86,7 @@ const ContactForm = () => {
       <Typography variant="h5" textAlign="center" marginBottom={2}>
         İletişim Formu
       </Typography>
-      <form onSubmit={handleSubmit}>
+      <form>
         {/* Hidden input for Netlify form name */}
         <input type="hidden" name="form-name" value="contact" />
 
@@ -99,7 +120,12 @@ const ContactForm = () => {
           onChange={handleChange}
           margin="normal"
         />
-        <StyledButton type="submit" variant="contained" fullWidth>
+        <StyledButton
+          onClick={handleSubmit}
+          type="submit"
+          variant="contained"
+          fullWidth
+        >
           Gönder
         </StyledButton>
       </form>
@@ -107,8 +133,11 @@ const ContactForm = () => {
         open={snackbarOpen}
         autoHideDuration={3000}
         onClose={() => setSnackbarOpen(false)}
-        message="Mesajınız başarıyla gönderildi!"
-      />
+      >
+        <Alert severity="success" variant="filled" sx={{ width: "100%" }}>
+          Mesajınız başarıyla gönderildi!
+        </Alert>
+      </Snackbar>
     </FormContainer>
   );
 };
