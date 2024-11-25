@@ -80,11 +80,9 @@ const ContactForm = () => {
           onChange={handleChange}
           margin="normal"
         />
-        <StyledButton
-          type="submit"
-          variant="contained"
-          fullWidth
-        ></StyledButton>
+        <StyledButton type="submit" variant="contained" fullWidth>
+          Gönder
+        </StyledButton>
       </form>
       <Snackbar
         open={snackbarOpen}
