@@ -31,4 +31,9 @@ export async function handler(event) {
     .catch((error) => {
       console.error("Error sending email", error);
     });
+
+  return {
+    statusCode: 200,
+    body: JSON.stringify({ message: "Email sent!" }),
+  };
 }
