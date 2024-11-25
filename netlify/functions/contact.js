@@ -1,8 +1,6 @@
 import { Resend } from "resend";
 
 export async function handler(event) {
-  console.log("event", event);
-
   if (event.httpMethod !== "POST") {
     return {
       statusCode: 405,
@@ -13,6 +11,8 @@ export async function handler(event) {
   const { name, email, message } = JSON.parse(event.body);
 
   console.log("Name:", name);
+  console.log("Email:", email);
+  console.log("Message:", message);
 
   const resend = new Resend("re_PcxNN4qT_8AhGDUG4jj1noW186msVjNbF");
 
@@ -20,10 +20,10 @@ export async function handler(event) {
 
   await resend.emails
     .send({
-      from: "onboarding@resend.dev",
+      from: email,
       to: "armatechemail@gmail.com",
-      subject: "Hello World",
-      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+      subject: `New message from ${name}`,
+      html: `<p>${message}</p>`,
     })
     .then((response) => {
       console.log("Email sent!", response);
