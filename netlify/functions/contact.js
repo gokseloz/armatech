@@ -27,13 +27,12 @@ export async function handler(event) {
     })
     .then((response) => {
       console.log("Email sent!", response);
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ message: "Email sent!" }),
+      };
     })
     .catch((error) => {
       console.error("Error sending email", error);
     });
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: "Email sent!" }),
-  };
 }
