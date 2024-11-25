@@ -18,10 +18,17 @@ export async function handler(event) {
 
   console.log("Sending email...");
 
-  await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: "armatechemail@gmail.com",
-    subject: "Hello World",
-    html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
-  });
+  await resend.emails
+    .send({
+      from: "onboarding@resend.dev",
+      to: "armatechemail@gmail.com",
+      subject: "Hello World",
+      html: "<p>Congrats on sending your <strong>first email</strong>!</p>",
+    })
+    .then((response) => {
+      console.log("Email sent!", response);
+    })
+    .catch((error) => {
+      console.error("Error sending email", error);
+    });
 }
