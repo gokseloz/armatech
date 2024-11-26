@@ -86,6 +86,10 @@ export default function DrawerAppBar() {
     }
   };
 
+  const handleServisClick = () => {
+    navigate("/servis");
+  };
+
   const handleIletisimClick = () => {
     if (location.pathname === "/") {
       const targetSection = document.getElementById("İletişim");
@@ -164,6 +168,15 @@ export default function DrawerAppBar() {
             <ListItemText primary="Ürünler" />
           </ListItemButton>
         </ListItem>
+        <ListItem disablePadding>
+          <ListItemButton
+            component="button"
+            onClick={handleProductMenuClick}
+            sx={{ textAlign: "center" }}
+          >
+            <ListItemText primary="SERVİS" />
+          </ListItemButton>
+        </ListItem>
         <ListItem onClick={handleIletisimClick} disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
             <ListItemText primary="İletişim" />
@@ -228,6 +241,7 @@ export default function DrawerAppBar() {
                 >
                   Ürünler
                 </Button>
+                <Button onClick={handleServisClick}>SERVİS</Button>
                 <Button onClick={handleIletisimClick}>İletişim</Button>
                 <Button onClick={handleBizeUlasinlick}>Bize Ulaşın</Button>
               </Box>
