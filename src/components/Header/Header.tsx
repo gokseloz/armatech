@@ -171,15 +171,20 @@ export default function DrawerAppBar() {
         <ListItem disablePadding>
           <ListItemButton
             component="button"
-            onClick={handleProductMenuClick}
+            onClick={handleServisClick}
             sx={{ textAlign: "center" }}
           >
-            <ListItemText primary="SERVİS" />
+            <ListItemText primary="Servis" />
           </ListItemButton>
         </ListItem>
         <ListItem onClick={handleIletisimClick} disablePadding>
           <ListItemButton sx={{ textAlign: "center" }}>
             <ListItemText primary="İletişim" />
+          </ListItemButton>
+        </ListItem>
+        <ListItem onClick={handleBizeUlasinlick} disablePadding>
+          <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemText primary="Bize Ulaşın" />
           </ListItemButton>
         </ListItem>
       </List>
@@ -219,11 +224,11 @@ export default function DrawerAppBar() {
           <Box
             width="150px"
             onClick={handleAnaSayfaClick}
-            sx={{ cursor: "pointer" }}
+            sx={{ cursor: "pointer", flexShrink: 0 }}
           >
             <img src={Logo} width="100%" />
           </Box>
-          <Toolbar sx={{ padding: 0, flexShrink: 0 }}>
+          <Toolbar sx={{ padding: 0 }}>
             <Box
               sx={{ display: { xs: "none", sm: "flex" } }}
               justifyContent="space-between"
