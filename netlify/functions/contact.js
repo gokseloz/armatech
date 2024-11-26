@@ -20,7 +20,7 @@ export async function handler(event) {
 
   await resend.emails
     .send({
-      from: "armatech31@gmail.com",
+      from: "no-reply@resend.dev",
       to: "armatech31@gmail.com",
       reply_to: email,
       subject: `New message from ${name}`,
