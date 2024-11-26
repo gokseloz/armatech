@@ -14,14 +14,14 @@ export async function handler(event) {
   console.log("Email:", email);
   console.log("Message:", message);
 
-  const resend = new Resend("re_dDSax43w_5uP28WXZ1ZH8z1ZL2sz5EhH3");
+  const resend = new Resend("re_713Ly4LP_CjN78mkWajCwWwgRkikgQnSG");
 
   console.log("Sending email...");
 
   await resend.emails
     .send({
-      from: "updates.armatech.com",
-      to: "armatechemail@gmail.com",
+      from: "armatech31@gmail.com",
+      to: "armatech31@gmail.com",
       reply_to: email,
       subject: `New message from ${name}`,
       html: `
