@@ -14,14 +14,14 @@ export async function handler(event) {
   console.log("Email:", email);
   console.log("Message:", message);
 
-  const resend = new Resend("re_713Ly4LP_CjN78mkWajCwWwgRkikgQnSG");
+  const resend = new Resend(process.env.REACT_APP_RESEND_API_KEY);
 
   console.log("Sending email...");
 
   try {
     const response = await resend.emails.send({
       from: "no-reply@resend.dev",
-      to: "armatech31@gmail.com",
+      to: ["armatech31@gmail.com", "goksel_ozkazanc_08@hotmail.com"],
       reply_to: email,
       subject: `New message from ${name}`,
       html: `
