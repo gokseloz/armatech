@@ -88,6 +88,7 @@ import MekanikTakimTutucular from "./pages/Products/TakimTutucular/MekanikTakimT
 import Footer from "./components/Footer/Footer";
 import Itendo2 from "./pages/Products/TakimTutucular/TendoHidrolikTakimTutucular/Itendo2";
 import UseScrollToTop from "./hooks/UseScrollToTop";
+import Urunler from "./pages/Products/urunler";
 
 const App: React.FC = () => {
   return (
@@ -103,6 +104,7 @@ const App: React.FC = () => {
           >
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/urunler" element={<Urunler />} />
               <Route path="/takim-tutucular" element={<TakimTutucular />} />
               {/* Tendo Hidrolik Takım Tutucular */}
               <Route

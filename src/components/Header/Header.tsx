@@ -48,6 +48,8 @@ export default function DrawerAppBar() {
   const handleProductMenuClick = (
     event: React.MouseEvent<HTMLButtonElement>
   ) => {
+    navigate("/urunler");
+    return;
     setAnchorEl(event.currentTarget);
   };
 
