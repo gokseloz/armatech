@@ -21,7 +21,7 @@ export async function handler(event) {
   try {
     const response = await resend.emails.send({
       from: "no-reply@resend.dev",
-      to: ["armatech31@gmail.com", "goksel_ozkazanc_08@hotmail.com"],
+      to: ["armatech31@gmail.com", "gokselozkazanc08@gmail.com"],
       reply_to: email,
       subject: `New message from ${name}`,
       html: `
