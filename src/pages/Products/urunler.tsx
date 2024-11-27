@@ -12,7 +12,7 @@ import vakumTablaImage from "../../assets/images/vakum-tabla/vakum-tabla-merged.
 import capakAlmaImage from "../../assets/images/capak-alma/capak-alma-merged.webp";
 import otomatikImage from "../../assets/images/otomatik/otomatik.jpg";
 import tornaAynalariImage from "../../assets/images/torna-aynalari/hidrolik-torna-aynalari/rota-2b.webp";
-import veroSPaletImage from "../../assets/images/vero-s-hizli-palet-degistirme-sistemi/genel-frezeleme/vero-s-nse3-nse-plus.png";
+import veroSPaletImage from "../../assets/images/vero-s-hizli-palet-degistirme-sistemi/otomatik-yukleme-bosaltma/vero-s-nsl3-150-200-400/nsl3150200400.webp";
 import theme from "../../theme";
 import Container from "../../components/Container";
 
@@ -27,24 +27,7 @@ const products = [
     image: manyetikTablalarImage,
     link: "/manyetik-tablalar",
   },
-  {
-    title: "Kuvvet Blokları",
-    image: kuvvetBloklariImage,
-    link: "/kuvvet-bloklari",
-  },
   { title: "Mengeneler", image: mengenelerImage, link: "/mengeneler" },
-  { title: "Kuleler", image: kulelerImage, link: "/kuleler" },
-  {
-    title: "Vakum Tabla",
-    image: vakumTablaImage,
-    link: "/vakum-tabla",
-  },
-  { title: "Çapak Alma", image: capakAlmaImage, link: "/capak-alma" },
-  {
-    title: "Otomatik Talaşlı İmalat",
-    image: otomatikImage,
-    link: "/otomatik-talasli-imalat",
-  },
   {
     title: "Torna Aynaları",
     image: tornaAynalariImage,
@@ -53,8 +36,25 @@ const products = [
   {
     title: "Vero-S Palet Değiştirme Sistemi",
     image: veroSPaletImage,
-    link: "/vero-s-palet-degistirme-sistemi",
+    link: "/vero-s-hizli-palet-degistirme-sistemleri",
   },
+  {
+    title: "Kuvvet Blokları",
+    image: kuvvetBloklariImage,
+    link: "/kuvvet-bloklari",
+  },
+  {
+    title: "Otomatik Talaşlı İmalat",
+    image: otomatikImage,
+    link: "/otomatik-talasli-imalat",
+  },
+  { title: "Çapak Alma", image: capakAlmaImage, link: "/capak-alma" },
+  {
+    title: "Vakum Tabla",
+    image: vakumTablaImage,
+    link: "/vakum-tabla",
+  },
+  { title: "Kuleler", image: kulelerImage, link: "/kuleler" },
 ];
 
 // Styled components

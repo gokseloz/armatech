@@ -88,8 +88,8 @@ import MekanikTakimTutucular from "./pages/Products/TakimTutucular/MekanikTakimT
 import Footer from "./components/Footer/Footer";
 import Itendo2 from "./pages/Products/TakimTutucular/TendoHidrolikTakimTutucular/Itendo2";
 import UseScrollToTop from "./hooks/UseScrollToTop";
-import Urunler from "./pages/Products/urunler";
 import Servis from "./pages/Servis/Servis";
+import Urunler from "./pages/Products/Urunler";
 
 const App: React.FC = () => {
   return (
@@ -366,7 +366,7 @@ const App: React.FC = () => {
               {/* Capak Alma */}
               <Route path="/capak-alma" element={<CapakAlma />} />
               {/* Otomatik */}
-              <Route path="/otomatik" element={<Otomatik />} />
+              <Route path="/otomatik-talasli-imalat" element={<Otomatik />} />
             </Routes>
             <Footer />
           </Stack>
