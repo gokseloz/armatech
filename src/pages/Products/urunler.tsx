@@ -5,13 +5,13 @@ import { useNavigate } from "react-router-dom";
 // Resimler
 import takimTutucularImage from "../../assets/images/takim-tutucular/tendo-takim-tutucular.webp";
 import manyetikTablalarImage from "../../assets/images/manyetik-tablalar/kare-kutuplu-manyetik-tabla.webp";
-import kuvvetBloklariImage from "../../assets/images/kuvvet-bloklari/tandem-krp.webp";
-import mengenelerImage from "../../assets/images/mengeneler/ksc-d.webp";
+import kuvvetBloklariImage from "../../assets/images/kuvvet-bloklari/tandem-ksp3.webp";
+import mengenelerImage from "../../assets/images/mengeneler/ksc3.webp";
 import kulelerImage from "../../assets/images/kuleler/tombstones.webp";
 import vakumTablaImage from "../../assets/images/vakum-tabla/vakum-tabla-merged.webp";
 import capakAlmaImage from "../../assets/images/capak-alma/capak-alma-merged.webp";
 import otomatikImage from "../../assets/images/otomatik/otomatik.jpg";
-import tornaAynalariImage from "../../assets/images/torna-aynalari/hidrolik-torna-aynalari/rota-2b.webp";
+import tornaAynalariImage from "../../assets/images/torna-aynalari/hidrolik-torna-aynalari/rota-thw3.webp";
 import veroSPaletImage from "../../assets/images/vero-s-hizli-palet-degistirme-sistemi/otomatik-yukleme-bosaltma/vero-s-nsl3-150-200-400/nsl3150200400.webp";
 import theme from "../../theme";
 import Container from "../../components/Container";
@@ -54,7 +54,11 @@ const products = [
     image: vakumTablaImage,
     link: "/vakum-tabla",
   },
-  { title: "Kule Bağlama Sistemleri", image: kulelerImage, link: "/kule-baglama-sistemleri" },
+  {
+    title: "Kule Bağlama Sistemleri",
+    image: kulelerImage,
+    link: "/kule-baglama-sistemleri",
+  },
 ];
 
 // Styled components
