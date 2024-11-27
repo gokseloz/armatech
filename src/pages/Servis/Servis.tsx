@@ -43,7 +43,7 @@ const ProductCard = styled(Card)({
 });
 
 // Component
-const Urunler = () => {
+const Servis = () => {
   return (
     <Container>
       <PageContainer>
@@ -79,4 +79,4 @@ const Urunler = () => {
   );
 };
 
-export default Urunler;
+export default Servis;
