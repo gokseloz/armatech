@@ -89,7 +89,7 @@ import Footer from "./components/Footer/Footer";
 import Itendo2 from "./pages/Products/TakimTutucular/TendoHidrolikTakimTutucular/Itendo2";
 import UseScrollToTop from "./hooks/UseScrollToTop";
 import Servis from "./pages/Servis/Servis";
-import Urunler from "./pages/Products/Urunler";
+import Urunler from "./pages/Products/Products";
 
 const App: React.FC = () => {
   return (
