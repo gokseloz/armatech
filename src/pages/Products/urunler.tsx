@@ -54,7 +54,7 @@ const products = [
     image: vakumTablaImage,
     link: "/vakum-tabla",
   },
-  { title: "Kuleler", image: kulelerImage, link: "/kuleler" },
+  { title: "Kule Bağlama Sistemleri", image: kulelerImage, link: "/kule-baglama-sistemleri" },
 ];
 
 // Styled components

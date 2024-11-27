@@ -113,7 +113,7 @@ const ProductCard = ({
             cursor: "pointer",
           }}
           onClick={() =>
-            (window.location.href = `/kuleler${productDetailLink}`)
+            (window.location.href = `/kule-baglama-sistemleri${productDetailLink}`)
           }
         >
           <CardMedia

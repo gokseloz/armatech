@@ -326,10 +326,10 @@ const App: React.FC = () => {
               <Route path="/mengeneler/ksx-c2" element={<KSX_C2_Mengene />} />
               <Route path="/mengeneler/ksx" element={<KSX_Mengene />} />
               {/* Kuleler */}
-              <Route path="/kuleler/" element={<Kuleler />} />
-              <Route path="/kuleler/tombstones" element={<TombStones />} />
+              <Route path="/kule-baglama-sistemleri/" element={<Kuleler />} />
+              <Route path="/kule-baglama-sistemleri/tombstones" element={<TombStones />} />
               <Route
-                path="/kuleler/vero-s-tombstones"
+                path="/kule-baglama-sistemleri/vero-s-tombstones"
                 element={<VERO_S_Tombstones />}
               />
               {/* Manyetik Tablalar */}
