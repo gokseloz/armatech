@@ -13,8 +13,7 @@ import { useSnackbar } from "notistack";
 
 const FormContainer = styled(Box)({
   maxWidth: "600px",
-  margin: "auto",
-  marginTop: "2rem",
+  margin: "2rem auto",
   padding: "2rem",
   backgroundColor: "#f9f9f9",
   boxShadow: theme.shadows[3],

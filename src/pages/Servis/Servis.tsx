@@ -1,16 +1,17 @@
-import { Box, Typography, Card, CardMedia } from "@mui/material";
+import { Box, Typography, Card } from "@mui/material";
 import { styled } from "@mui/system";
 
 // Resimler
 import manyetikTablalarImage from "../../assets/images/manyetik-tablalar/kare-kutuplu-manyetik-tabla.webp";
 import theme from "../../theme";
 import Container from "../../components/Container";
+import { useNavigate } from "react-router-dom";
 
 const servisler = [
   {
-    title: "Manyetik Tabla Arıza ve Bakım",
+    title: "Manyetik Tabla ve Kontrol Ünitesi Servis Hizmetleri",
     image: manyetikTablalarImage,
-    link: "/manyetik-tabla-ariza-ve-bakim",
+    link: "/servis/manyetik-tabla-kontrol-unitesi",
   },
 ];
 
@@ -32,18 +33,21 @@ const ProductRow = styled(Box)({
 });
 
 const ProductCard = styled(Card)({
-  display: "flex",
-  flexDirection: "column",
-  gap: theme.spacing(2),
   maxWidth: "300px",
   width: "320px",
   boxShadow: theme.shadows[5],
   borderRadius: "8px",
+  transition: "transform 0.3s ease-in-out",
+  "&:hover": {
+    transform: "scale(1.05)",
+  },
+  cursor: "pointer",
   padding: theme.spacing(2),
 });
 
 // Component
 const Servis = () => {
+  const navigate = useNavigate();
   return (
     <Container>
       <PageContainer>
@@ -52,17 +56,10 @@ const Servis = () => {
         </Typography>
         <ProductRow>
           {servisler.map((servis) => (
-            <ProductCard key={servis.title}>
-              <CardMedia
-                component="img"
-                image={servis.image}
-                title={servis.title}
-                sx={{
-                  height: 140,
-                  objectFit: "contain",
-                }}
-              />
-
+            <ProductCard
+              key={servis.title}
+              onClick={() => navigate(servis.link)}
+            >
               <Typography
                 variant="h6"
                 textAlign="center"

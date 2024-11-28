@@ -90,6 +90,7 @@ import Itendo2 from "./pages/Products/TakimTutucular/TendoHidrolikTakimTutucular
 import UseScrollToTop from "./hooks/UseScrollToTop";
 import Servis from "./pages/Servis/Servis";
 import Urunler from "./pages/Products/Products";
+import ManyetikTablaKontrolUnitesi from "./pages/Servis/ManyetikTablaKontrolUnitesi";
 
 const App: React.FC = () => {
   return (
@@ -107,6 +108,10 @@ const App: React.FC = () => {
               <Route path="/" element={<Home />} />
               <Route path="/urunler" element={<Urunler />} />
               <Route path="/servis" element={<Servis />} />
+              <Route
+                path="/servis/manyetik-tabla-kontrol-unitesi"
+                element={<ManyetikTablaKontrolUnitesi />}
+              />
               <Route path="/takim-tutucular" element={<TakimTutucular />} />
               {/* Tendo Hidrolik Takım Tutucular */}
               <Route
